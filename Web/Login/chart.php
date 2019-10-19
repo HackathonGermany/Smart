@@ -39,7 +39,8 @@ BODY {
                     var temperatur = [];
 
                     for (var i in data) {
-                        time.push(data[i].student_time);
+                        test = new Date(data[i].time * 1000).format('h:i:s');
+                        time.push(test);                        
                         temperatur.push(data[i].temperatur);
                     }
 
@@ -56,6 +57,17 @@ BODY {
                             }
                         ]
                     };
+
+                    var option = {
+                      layout: {
+                        margin: {
+                          left: 0,
+                          right: 1,
+                          top: 1,
+                          bottom: 1
+                        }
+                      }
+                    }
 
                     var graphTarget = $("#graphCanvas");
 
