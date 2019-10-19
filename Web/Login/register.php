@@ -74,7 +74,7 @@ if($showFormular) {
 ?>
  
  <form class="form-signin" action="?register=1" method="post">
- <img class="mb-4" src="../assets/media/logo.svg    " alt="" width="72" height="72">
+ <img class="mb-4" src="../assets/media/logo.svg" alt="" width="75" height="75">
   <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
   <label for="inputForename" class="sr-only">Given name</label>
   <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" class="form-control" placeholder="Given name" required="">

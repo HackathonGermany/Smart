@@ -55,3 +55,6 @@ body {
       font-size: 3.5rem;
     }
 }
+input {
+    margin-bottom: 10px; 
+}
