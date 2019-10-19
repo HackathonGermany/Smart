@@ -2,6 +2,8 @@
 session_start();
 include 'connect_db.php';
 $conn = OpenCon();
+echo "Connected Successfully";
+CloseCon($conn);
 ?>
 <!DOCTYPE html> 
 <html> 
