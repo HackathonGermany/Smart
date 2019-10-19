@@ -55,6 +55,42 @@ echo '<pre>'; print_r($data["0"]); echo '</pre>';
 <?php
 echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
+
+<table>
+ <tr>
+  <th>Name</th>
+  <th>Wert</th>
+ </tr>
+ <tr>
+  <td>Strom</td>
+  <td><?php echo '<pre>'; print_r($data["0"]["Strom"]); echo '</pre>'; ?></td>
+ </tr>
+ <tr>
+  <td>Spannung</td>
+  <td>Purple</td>
+ </tr>
+ <tr>
+  <td>Watt</td>
+  <td>Yellow</td>
+ </tr>
+ <tr>
+  <td>lichtstaerke</td>
+  <td>Purple</td>
+ </tr>
+ <tr>
+  <td>temperatur</td>
+  <td>Yellow</td>
+ </tr>
+ <tr>
+  <td>luftfeuchtigkeit</td>
+  <td>Purple</td>
+ </tr>
+ <tr>
+  <td>status</td>
+  <td>Purple</td>
+ </tr>
+</table>
+
  <iframe style="float:middle;" width="600" height="300" frameborder=0 src="chart.php"></iframe> 
         <div class="Haus">
             <div class="data" id="Strom">
