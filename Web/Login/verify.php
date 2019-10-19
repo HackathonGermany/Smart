@@ -13,7 +13,7 @@ if(!isset($unsafehash) || !isset($unsafevorname))
 //$hash = mysqli_real_escape_string($pdo, $unsafehash);
 //$vorname = mysqli_real_escape_string($pdo, $unsafevorname);
 
-$statement = $pdo->prepare("SELECT * FROM 'users' WHERE vorname = :vorname");
+$statement = $pdo->prepare("SELECT * FROM users WHERE vorname = :vorname");
 $result = $statement->execute(array('vorname' => $unsafevorname));
 $user = $statement->fetch();
 echo $user['hash'];
