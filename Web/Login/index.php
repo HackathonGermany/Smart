@@ -36,7 +36,7 @@ foreach ($result as $row) {
   $data[] = $row;
 }
 
-echo '<pre>'; print_r($data["0"]); echo '</pre>';
+#echo '<pre>'; print_r($data["0"]); echo '</pre>';
 
 
 ?>
