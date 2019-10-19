@@ -22,7 +22,7 @@ if($user['hash'] == $hash)
     SET `isv` = :isv,
     WHERE `hash` = :hashlocal AND `email` = :email";
 
-    $statement = $conn->prepare($sql);
+    $statement = $pdo->prepare($sql);
     $statement->bindValue(":isv", 1);
     $statement->bindValue(":email", $email);
     $statement->bindValue(":hashlocal", $hash);
