@@ -57,6 +57,16 @@ BODY {
                         ]
                     };
 
+                    var option = {
+                      layout: {
+                        padding: {
+                          left: 0,
+                          right: 150,
+                          top: 0,
+                          bottom: 0
+                        }
+                      }
+                    }
 
                     var graphTarget = $("#graphCanvas");
 
