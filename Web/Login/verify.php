@@ -3,16 +3,16 @@
 $pdo = new PDO('mysql:host=localhost;dbname=dyingearth', 'esp', 'esp');
 
 $hash    = $_GET["hash"];
-$vorname = $_GET["vorname"];
+$email = $_GET["email"];
 
-if(!isset($hash) || !isset($vorname)) 
+if(!isset($hash) || !isset($email)) 
 {
     header("Location: /");
 }
 
 
-$statement = $pdo->prepare("SELECT * FROM users WHERE vorname = :vorname");
-$result = $statement->execute(array('vorname' => $vorname));
+$statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+$result = $statement->execute(array('email' => $email));
 $user = $statement->fetch();
 if($user['hash'] == $hash)
 {
