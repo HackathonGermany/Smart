@@ -57,23 +57,21 @@ BODY {
                         ]
                     };
 
-                    var options: {
-                        layout: {
-                            padding: {
-                                left: 0,
-                                right: 50,
-                                top: 0,
-                                bottom: 0
-                            }
-                        }
-                    }
-
 
                     var graphTarget = $("#graphCanvas");
 
                     var barGraph = new Chart(graphTarget, {
                         type: 'line',
                         data: chartdata
+                        options: {
+                            layout: {
+                                padding: {
+                                left: 50,
+                                right: 0,
+                                top: 0,
+                                bottom: 0
+                            }
+                        }
                     });
                 });
             }
