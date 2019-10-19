@@ -7,8 +7,6 @@ if(!isset($_SESSION['userid'])) {
  
 //Abfrage der Nutzer ID vom Login
 $userid = $_SESSION['userid'];
- 
-echo "Hallo User: ".$userid;
 ?>
 
 <html>
@@ -22,6 +20,9 @@ echo "Hallo User: ".$userid;
         <!-- <meta http-equiv="refresh" content="1; URL=/Login/"> -->
     </head>
 <body>
+<?php
+echo "Hallo User: ".$userid;
+?>
         <div class="Haus">
             <div class="data" id="Strom">
             </div>
