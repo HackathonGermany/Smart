@@ -13,6 +13,7 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
+        header("Location: login.php");
         die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
