@@ -87,9 +87,9 @@ $test263 = $_GET["plot"];
                         datasets: [
                             {
                                 label: '<?php echo $_GET["plot"]; ?>',
-                                backgroundColor: '#49e2ff',
+                                backgroundColor: '#FF0000', //49e2ff
                                 borderColor: '#46d5f1',
-                                hoverBackgroundColor: '#FF0000',
+                                hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
                                 data: temperatur
                             }
