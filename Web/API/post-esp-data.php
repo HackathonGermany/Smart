@@ -13,11 +13,15 @@ $api_key= $sensor = $location = $value1 = $value2 = $value3 = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = test_input($_POST["api_key"]);
     if($api_key == $api_key_value) {
-        $sensor = test_input($_POST["sensor"]);
-        $location = test_input($_POST["location"]);
-        $value1 = test_input($_POST["value1"]);
-        $value2 = test_input($_POST["value2"]);
-        $value3 = test_input($_POST["value3"]);
+        $strom            = test_input($_POST["strom"]);
+        $spannung         = test_input($_POST["spannung"]);
+        $watt             = test_input($_POST["watt"]);
+        $lichtstaerke     = test_input($_POST["lichtstaerke"]);
+        $temperatur       = test_input($_POST["temperatur"]);
+        $luftfeuchtigkeit = test_input($_POST["luftfeuchtigkeit"]);
+        $status           = test_input($_POST["status"]);
+        $time             = test_input($_POST["time"]);
+
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -26,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "INSERT INTO SensorData (sensor, location, value1, value2, value3)
-        VALUES ('" . $sensor . "', '" . $location . "', '" . $value1 . "', '" . $value2 . "', '" . $value3 . "')";
+        $sql = "INSERT INTO data (strom, spannung, watt, lichtstaerke, temperatur, luftfeuchtigkeit, status, time)
+        VALUES ('" . $strom . "', '" . $spannung . "', '" . $watt . "', '" . $lichtstaerke . "', '" . $temperatur . "', '" . $luftfeuchtigkeit . "', '" . $status . "', '" . $time . "')";
         
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
