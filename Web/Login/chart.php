@@ -41,22 +41,22 @@ BODY {
                     if ($_GET["plot"] == "Strom") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
-                            temperatur.push(data[i].temperatur);
+                            temperatur.push(data[i].Strom);
                         }
                     } elseif ($_GET["plot"] == "Spannung") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
-                            temperatur.push(data[i].temperatur);
+                            temperatur.push(data[i].Spannung);
                         }
                     } elseif ($_GET["plot"] == "Watt") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
-                            temperatur.push(data[i].temperatur);
+                            temperatur.push(data[i].Watt);
                         }
                     } elseif ($_GET["plot"] == "lichtstaerke") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
-                            temperatur.push(data[i].temperatur);
+                            temperatur.push(data[i].lichtstaerke);
                         }
                     } elseif ($_GET["plot"] == "temperatur") {
                         for (var i in data) {
@@ -66,12 +66,12 @@ BODY {
                     } elseif ($_GET["plot"] == "luftfeuchtigkeit") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
-                            temperatur.push(data[i].temperatur);
+                            temperatur.push(data[i].luftfeuchtigkeit);
                         }
                     } elseif ($_GET["plot"] == "status") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
-                            temperatur.push(data[i].temperatur);
+                            temperatur.push(data[i].status);
                         }
                     }
 

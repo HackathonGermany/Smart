@@ -56,67 +56,42 @@ foreach ($result as $row) {
 echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<table>
- <tr>
-  <th>Name</th>
-  <th>Wert</th>
- </tr>
- <tr>
-  <td>Strom</td>
-  <td><?php print_r($data["0"]["Strom"]); ?></td>
- </tr>
- <tr>
-  <td>Spannung</td>
-  <td><?php print_r($data["0"]["Spannung"]); ?></td>
- </tr>
- <tr>
-  <td>Watt</td>
-  <td><?php print_r($data["0"]["Watt"]); ?></td>
- </tr>
- <tr>
-  <td>lichtstaerke</td>
-  <td><?php print_r($data["0"]["lichtstaerke"]); ?></td>
- </tr>
- <tr>
-  <td>temperatur</td>
-  <td><?php print_r($data["0"]["temperatur"]); ?></td>
- </tr>
- <tr>
-  <td>luftfeuchtigkeit</td>
-  <td><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></td>
- </tr>
- <tr>
-  <td>status</td>
-  <td><?php print_r($data["0"]["status"]); ?></td>
- </tr>
-</table>
+    <table>
+     <tr>
+      <th>Name</th>
+      <th>Wert</th>
+     </tr>
+     <tr>
+      <td>Strom</td>
+      <td href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></td>
+     </tr>
+     <tr>
+      <td>Spannung</td>
+      <td><?php print_r($data["0"]["Spannung"]); ?></td>
+     </tr>
+     <tr>
+      <td>Watt</td>
+      <td><?php print_r($data["0"]["Watt"]); ?></td>
+     </tr>
+     <tr>
+      <td>lichtstaerke</td>
+      <td><?php print_r($data["0"]["lichtstaerke"]); ?></td>
+     </tr>
+     <tr>
+      <td>temperatur</td>
+      <td><?php print_r($data["0"]["temperatur"]); ?></td>
+     </tr>
+     <tr>
+      <td>luftfeuchtigkeit</td>
+      <td><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></td>
+     </tr>
+     <tr>
+      <td>status</td>
+      <td><?php print_r($data["0"]["status"]); ?></td>
+     </tr>
+    </table>
 
- <iframe style="float:middle;" width="600" height="300" frameborder=0 src="chart.php"></iframe> 
-        <div class="Haus">
-            <div class="data" id="Strom">
-            </div>
+    <iframe style="float:middle;" width="600" height="300" frameborder=0 src="chart.php?plot=<?php echo $plot ?>"></iframe> 
 
-            <div class="data" id="Spannung">
-            </div>
-
-            <div class="data" id="Watt">
-            </div>
-
-            <div class="data" id="Lichtstärke">
-            </div>
-
-            <div class="data" id="Temperatur">
-            </div>
-            
-            <div class="data" id="Luftfeuchtigkeit">
-            </div>
-
-            <div class="data" id="Status">
-            </div>
-
-            <div class="data" id="Zeit">
-            </div>
-        
-        </div>
     </body>
 </html>
