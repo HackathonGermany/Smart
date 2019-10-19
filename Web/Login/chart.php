@@ -26,7 +26,7 @@ if($test263 == "temperatur") {
 echo "Moskau";
 }
 
-?><!--
+?>
     <div id="chart-container" sytle="display: flex; justify-content: center;">
         <canvas id="graphCanvas"></canvas>
     </div>
@@ -47,12 +47,12 @@ echo "Moskau";
                     var time = [];
                     var temperatur = [];
 
-                    if (!isset($_GET["plot"]))
+                    if (!isset($test263))
                     {
                         echo "HEYY IT's NOT HERE";
                     }
                     
-                    /*if ($_GET["plot"] == "Strom") {
+                    if ($test263 == "Strom") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Strom);
@@ -123,7 +123,7 @@ echo "Moskau";
                 });
             }
         }
-        </script>-->
+        </script>
 
 </body>
 </html>
