@@ -7,6 +7,26 @@ if(!isset($_SESSION['userid'])) {
  
 //Abfrage der Nutzer ID vom Login
 $userid = $_SESSION['userid'];
+
+//database
+define('DB_HOST', '127.0.0.1');
+define('DB_USERNAME', 'esp');
+define('DB_PASSWORD', 'esp');
+define('DB_NAME', 'dyingearth');
+
+//get connection
+$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+$query = sprintf("SELECT MAX(time) FROM data");
+$result = $mysqli->query($query);
+
+//loop through the returned data
+$data = array();
+foreach ($result as $row) {
+  $data[] = $row;
+}
+
+echo $data;
 ?>
 
 <html>
