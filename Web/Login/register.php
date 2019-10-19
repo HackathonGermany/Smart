@@ -81,6 +81,7 @@ if($showFormular) {
   <label for="inputLastname" class="sr-only">Last name</label>
   <input type="text" id="inputLastname" size="40"  maxlength="250" name="nachname" class="form-control" placeholder="Last name" required="">
   <label for="inputEmail" class="sr-only">Email address</label>
+  <br />
   <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" class="form-control" size="40" maxlength="250" name="passwort" placeholder="Password" required="">
