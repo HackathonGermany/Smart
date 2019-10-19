@@ -47,7 +47,7 @@ BODY {
                         labels: time,
                         datasets: [
                             {
-                                label: 'Student temperatur',
+                                label: 'Temperatur',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
