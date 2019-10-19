@@ -84,7 +84,7 @@ if($showFormular) {
   if(!$echoerror) {
       $errormsg = "<div class='alert alert-danger' role='alert'>
                     $echoerror
-                  </div>"
+                  </div>";
       echo $errormsg;
   }
   ?>
