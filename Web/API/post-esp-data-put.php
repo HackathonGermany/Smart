@@ -10,7 +10,7 @@ $api_key_value = "tPmAT5Ab3j7F9";
 
 $api_key= $sensor = $location = $value1 = $value2 = $value3 = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "PUT") {
+//if ($_SERVER["REQUEST_METHOD"] == "PUT") {
     $api_key = test_input($_PUT["api_key"]);
     if($api_key == $api_key_value) {
         $sensor = test_input($_PUT["sensor"]);
@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "PUT") {
         echo "Wrong API Key provided.";
     }
 
-}
+/*}
 else {
-    echo "No data posted with HTTP POST.";
-}
+    echo "No data posted with HTTP PUT.";
+}*/
 
 function test_input($data) {
     $data = trim($data);
