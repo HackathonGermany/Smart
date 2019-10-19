@@ -20,8 +20,8 @@ BODY {
 <body>
 <?php
 
-    echo "HEYY IT's NOT HERE";
-    echo "viescher";
+echo $_GET["plot"];
+
 ?><!--
     <div id="chart-container" sytle="display: flex; justify-content: center;">
         <canvas id="graphCanvas"></canvas>
