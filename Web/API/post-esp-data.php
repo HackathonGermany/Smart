@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $luftfeuchtigkeit = test_input($_POST["luftfeuchtigkeit"]);
         $status           = test_input($_POST["status"]);
         $time             = test_input($_POST["time"]);
-        $datum             = test_input($_POST["datum"]);
+        $datum            = test_input($_POST["datum"]);
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
