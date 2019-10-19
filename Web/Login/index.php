@@ -29,7 +29,10 @@ foreach ($result as $row) {
 echo '<pre>'; print_r($data["0"]["MAX(time)"]); echo '</pre>';
 
 $test1234 = $data["0"]["MAX(time)"];
-$query = sprintf("select * from data where time = '".$test1234."'");
+echo $test1234;
+$sql = "select * from data where time = '".$test1234."'";
+echo $sql;
+$query = sprintf($sql);
 $result = $mysqli->query($query);
 
 $data = array();
