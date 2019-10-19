@@ -16,6 +16,8 @@ $vorname = mysqli_real_escape_string($pdo, $unsafevorname);
 $statement = $pdo->prepare("SELECT * FROM 'users' WHERE vorname = :vorname");
 $result = $statement->execute(array('vorname' => $vorname));
 $user = $statement->fetch();
+echo $user['hash'];
+echo $unsafehash;
 if($user['hash'] == $unsafehash)
 {
     echo "verified!";
