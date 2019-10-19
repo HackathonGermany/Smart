@@ -21,7 +21,7 @@ foreach ($result as $row) {
 }
 echo $data["0"][relays1].$data["0"][relays2].$data["0"][relays3].$data["0"][relays4];
 $bin = $data["0"][relays1].$data["0"][relays2].$data["0"][relays3].$data["0"][relays4];
-var_dump(http_response_code($bin));
+http_response_code($bin);
 
 // Keep this API Key value to be compatible with the ESP32 code provided in the project page. 
 // If you change this value, the ESP32 sketch needs to match
