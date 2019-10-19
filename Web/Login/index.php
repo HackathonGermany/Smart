@@ -111,6 +111,41 @@ foreach ($result as $row) {
     <input type="submit" value="Submit">
     </form>
 
+    <?php
+    $relais1 = $_GET["relais1"];
+    $relais2 = $_GET["relais2"];
+    $relais3 = $_GET["relais3"];
+    $relais4 = $_GET["relais4"];
+
+    $query = sprintf('UPDATE ralais SET relais1="'.$relais1.'" WHERE id=1;');
+    $result = $mysqli->query($query);
+    $data = array();
+    foreach ($result as $row) {
+      $data[] = $row;
+    }
+
+    $query = sprintf('UPDATE ralais SET relais1="'.$relais1.'" WHERE id=1;');
+    $result = $mysqli->query($query);
+    $data = array();
+    foreach ($result as $row) {
+      $data[] = $row;
+    }
+
+    $query = sprintf('UPDATE ralais SET relais1="'.$relais1.'" WHERE id=1;');
+    $result = $mysqli->query($query);
+    $data = array();
+    foreach ($result as $row) {
+      $data[] = $row;
+    }
+
+    $query = sprintf('UPDATE ralais SET relais1="'.$relais1.'" WHERE id=1;');
+    $result = $mysqli->query($query);
+    $data = array();
+    foreach ($result as $row) {
+      $data[] = $row;
+    }
+    ?>
+
     <?php $test54321 = 'chart.php?plot='.$_GET["plot"].''?>
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
 
