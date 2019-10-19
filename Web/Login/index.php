@@ -55,6 +55,7 @@ echo '<pre>'; print_r($data["0"]); echo '</pre>';
 <?php
 echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
+ <iframe src="chart.php"></iframe> 
         <div class="Haus">
             <div class="data" id="Strom">
             </div>
