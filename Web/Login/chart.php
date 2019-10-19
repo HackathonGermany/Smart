@@ -43,6 +43,7 @@ echo "Moskau";
                 $.post("data.php",
                 function (data)
                 {
+                    $test263 = $_GET["plot"];
                     console.log(data);
                     var time = [];
                     var temperatur = [];
