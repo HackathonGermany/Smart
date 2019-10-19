@@ -141,8 +141,12 @@ foreach ($result as $row) {
       <input type="radio" name="relais4" value="1"> An<br>
       </td>
     </tr>
-    </table>
+    <tr>
+    <td>
     <input type="submit" value="Submit">
+    </td>
+    </tr>
+    </table>
     </form>
 
     <?php
