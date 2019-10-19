@@ -29,17 +29,18 @@ if(isset($_GET['register'])) {
     $passwort2 = $_POST['passwort2'];
     $vorname = $_POST['vorname'];
     $nachname = $_POST['nachname'];
+    $echoerror = "";
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+        $echoerror = 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
         $error = true;
     }     
     if(strlen($passwort) == 0) {
-        echo 'Bitte ein Passwort angeben<br>';
+        $echoerror = 'Bitte ein Passwort angeben<br>';
         $error = true;
     }
     if($passwort != $passwort2) {
-        echo 'Die Passwörter müssen übereinstimmen<br>';
+        $echoerror = 'Die Passwörter müssen übereinstimmen<br>';
         $error = true;
     }
     
@@ -50,7 +51,7 @@ if(isset($_GET['register'])) {
         $user = $statement->fetch();
         
         if($user !== false) {
-            echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+            $echoerror = 'Diese E-Mail-Adresse ist bereits vergeben<br>';
             $error = true;
         }    
     }
@@ -63,12 +64,12 @@ if(isset($_GET['register'])) {
         $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash, 'hash' => $hash, 'vorname' => $vorname, 'nachname' => $nachname));
         
         if($result) {        
-            echo 'Du wurdest erfolgreich registriert. <a href="verify.php">Zum Login</a>';
-            $link = "192.168.1.179/Login/verify.php?hash=$hash&vorname=$vorname";
+            $echoerror = 'Du wurdest erfolgreich registriert. <a href="verify.php">Zum Login</a>';
+            $link = "http://192.168.1.179/Login/verify.php?hash=$hash&email=$email";
             sendVermail($email, $vorname, $link);
             $showFormular = false;
         } else {
-            echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+            $echoerror = 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
         }
     } 
 }
@@ -79,6 +80,14 @@ if($showFormular) {
  <form class="form-signin" action="?register=1" method="post">
  <img class="mb-4" src="../assets/media/logo.svg" alt="" width="75" height="75">
   <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+  <?php
+  if($echoerror != "") {
+      $errormsg = "<div class='alert alert-danger' role='alert'>
+                    $echoerror
+                  </div>";
+      echo $errormsg;
+  }
+  ?>
   <label for="inputForename" class="sr-only">Given name</label>
   <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" autofocus="" class="form-control" placeholder="Given name" required="">
   <label for="inputLastname" class="sr-only">Last name</label>

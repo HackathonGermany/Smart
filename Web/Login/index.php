@@ -7,15 +7,80 @@ if(!isset($_SESSION['userid'])) {
  
 //Abfrage der Nutzer ID vom Login
 $userid = $_SESSION['userid'];
- 
-echo "Hallo User: ".$userid;
+
+//database
+define('DB_HOST', '127.0.0.1');
+define('DB_USERNAME', 'esp');
+define('DB_PASSWORD', 'esp');
+define('DB_NAME', 'dyingearth');
+
+//get connection
+$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+$query = sprintf("SELECT MAX(time) FROM data");
+$result = $mysqli->query($query);
+
+//loop through the returned data
+$data = array();
+foreach ($result as $row) {
+  $data[] = $row;
+}
+
+$test1234 = $data["0"]["MAX(time)"];
+$sql = "select * from data where time = '".$test1234."'";
+$query = sprintf($sql);
+$result = $mysqli->query($query);
+
+$data = array();
+foreach ($result as $row) {
+  $data[] = $row;
+}
+
+echo '<pre>'; print_r($data["0"]); echo '</pre>';
+
+
 ?>
 
 <html>
-<head>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
-</head>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <meta lang="deDE" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="https://stsackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="assets/media/logo.ico">
+        <!-- <meta http-equiv="refresh" content="1; URL=/Login/"> -->
+    </head>
 <body>
+<?php
+echo "Hallo Benutzer mit der ID: ".$userid;
+?>
+ <iframe width="200" height="200" src="chart.php"></iframe> 
+        <div class="Haus">
+            <div class="data" id="Strom">
+            </div>
 
-</body>
+            <div class="data" id="Spannung">
+            </div>
+
+            <div class="data" id="Watt">
+            </div>
+
+            <div class="data" id="Lichtstärke">
+            </div>
+
+            <div class="data" id="Temperatur">
+            </div>
+            
+            <div class="data" id="Luftfeuchtigkeit">
+            </div>
+
+            <div class="data" id="Status">
+            </div>
+
+            <div class="data" id="Zeit">
+            </div>
+        
+        </div>
+    </body>
 </html>
