@@ -40,7 +40,7 @@ BODY {
 
                     for (var i in data) {
                         time.push(data[i].time);
-                        temperatur.push(data[i].temperatur);
+                        temperatur.push(gmdate("Y-m-d\TH:i:s\Z", data[i].temperatur));
                     }
 
                     var chartdata = {
