@@ -1,89 +1,37 @@
 <?php
-//index.php
-$connect = mysqli_connect("localhost", "esp", "esp", "dyingearth");
-#$query = '
-#SELECT sensors_temperature_data, 
-#UNIX_TIMESTAMP(CONCAT_WS(" ", sensors_data_date, sensors_data_time)) AS datetime 
-#FROM tbl_sensors_data 
-#ORDER BY sensors_data_date DESC, sensors_data_time DESC
-#';
-$query = '
-SELECT temperatur, 
-time AS datetime 
-FROM data 
-ORDER BY time DESC
-';
+//setting header to json
+header('Content-Type: application/json');
 
-$result = mysqli_query($connect, $query);
-$rows = array();
-$table = array();
+//database
+define('DB_HOST', '127.0.0.1');
+define('DB_USERNAME', 'esp');
+define('DB_PASSWORD', 'esp');
+define('DB_NAME', 'dyingearth');
 
-$table['cols'] = array(
- array(
-  'label' => 'Date Time', 
-  'type' => 'datetime'
- ),
- array(
-  'label' => 'Temperature (°C)', 
-  'type' => 'number'
- )
-);
+//get connection
+$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-while($row = mysqli_fetch_array($result))
-{
- $sub_array = array();
- $datetime = explode(".", $row["time"]);
- $sub_array[] =  array(
-      "v" => 'Date(' . $datetime[0] . '000)'
-     );
- $sub_array[] =  array(
-      "v" => $row["temperatur"]
-     );
- $rows[] =  array(
-     "c" => $sub_array
-    );
+if(!$mysqli){
+  die("Connection failed: " . $mysqli->error);
 }
-$table['rows'] = $rows;
-$jsonTable = json_encode($table);
 
-?>
+//query to get data from the table
+$query = sprintf("SELECT time, temperatur FROM data");
 
+//execute query
+$result = $mysqli->query($query);
 
-<html>
- <head>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript">
-   google.charts.load('current', {'packages':['corechart']});
-   google.charts.setOnLoadCallback(drawChart);
-   function drawChart()
-   {
-    var data = new google.visualization.DataTable(<?php echo $jsonTable; ?>);
+//loop through the returned data
+$data = array();
+foreach ($result as $row) {
+  $data[] = $row;
+}
 
-    var options = {
-     title:'Sensors Data',
-     legend:{position:'bottom'},
-     chartArea:{width:'95%', height:'65%'}
-    };
+//free memory associated with result
+$result->close();
 
-    var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+//close connection
+$mysqli->close();
 
-    chart.draw(data, options);
-   }
-  </script>
-  <style>
-  .page-wrapper
-  {
-   width:1000px;
-   margin:0 auto;
-  }
-  </style>
- </head>  
- <body>
-  <div class="page-wrapper">
-   <br />
-   <h2 align="center">Display Google Line Chart with JSON PHP & Mysql</h2>
-   <div id="line_chart" style="width: 100%; height: 500px"></div>
-  </div>
- </body>
-</html>
+//now print the data
+print json_encode($data);
