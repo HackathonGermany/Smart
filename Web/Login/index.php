@@ -138,15 +138,21 @@ foreach ($result as $row) {
       $data[] = $row;
     }
 
-    $query = sprintf('UPDATE ralays SET relays4="'.$relais4.'" WHERE id=1;');
+    /*$query = sprintf('UPDATE ralays SET relays4="'.$relais4.'" WHERE id=1;');
     $result = $mysqli->query($query);
     $data = array();
     foreach ($result as $row) {
       $data[] = $row;
-    }
+    }*/
     ?>
 
-    <?php $test54321 = 'chart.php?plot='.$_GET["plot"].''?>
+    <?php if (isset($_GET["plot"]))
+    {
+      $test54321 = 'chart.php?plot='.$_GET["plot"].'';
+    } else {
+      $test54321 = 'chart.php?plot=temperatur';
+    }
+    ?>
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
 
     </body>
