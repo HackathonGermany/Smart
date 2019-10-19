@@ -88,6 +88,7 @@ if($showFormular) {
   <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
   <br />
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+  <br />
     <div>
       <a id="reg" href="/Login/login.php">Already have a Account?</a>
     </div>
