@@ -53,7 +53,7 @@ echo '<pre>'; print_r($data["0"]); echo '</pre>';
     </head>
 <body>
 <?php
-echo "Hallo User: ".$userid;
+echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
         <div class="Haus">
             <div class="data" id="Strom">

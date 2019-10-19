@@ -18,9 +18,11 @@ BODY {
 
 </head>
 <body>
+    <center>
     <div id="chart-container">
         <canvas id="graphCanvas"></canvas>
     </div>
+    </center>
 
     <script>
         $(document).ready(function () {
@@ -39,9 +41,9 @@ BODY {
                     var temperatur = [];
 
                     for (var i in data) {
-                        test = "test";
+                        //test = "test";
                         //test = new Date(data[i].time * 1000).format('h:i:s');
-                        time.push(test);                        
+                        time.push(data[i].datum);                        
                         temperatur.push(data[i].temperatur);
                     }
 
