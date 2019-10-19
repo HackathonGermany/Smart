@@ -20,11 +20,10 @@ if($user['hash'] == $hash)
 
     $sql = "UPDATE `users`   
     SET `isv` = :isv,
-    WHERE `hash` = :hashlocal AND `email` = :email";
+    WHERE `hash` = :hashlocal";
 
     $statement = $pdo->prepare($sql);
     $statement->bindValue(":isv", 1);
-    $statement->bindValue(":email", $email);
     $statement->bindValue(":hashlocal", $hash);
     $count = $statement->execute();
 
