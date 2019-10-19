@@ -80,10 +80,12 @@ if($showFormular) {
   <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" autofocus="" class="form-control" placeholder="Given name" required="">
   <label for="inputLastname" class="sr-only">Last name</label>
   <input type="text" id="inputLastname" size="40"  maxlength="250" name="nachname" autofocus="" class="form-control" placeholder="Last name" required="">
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" size="40" maxlength="250" name="passwort" autofocus="" placeholder="Password" required="">
   <label for="inputPassword2" class="sr-only">Re-enter password</label>
   <input type="password" id="inputPassword2" class="form-control" size="40" maxlength="250" name="passwort2" autofocus="" placeholder="Re-enter password" required="">
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
   <div class="checkbox mb-3">
     <label>
       <input type="checkbox" value="remember-me"> Remember me
