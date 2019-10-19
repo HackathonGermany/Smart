@@ -47,7 +47,7 @@ BODY {
                         labels: time,
                         datasets: [
                             {
-                                label: 'Student temperatur',
+                                label: 'Temperatur',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -60,7 +60,7 @@ BODY {
                     var graphTarget = $("#graphCanvas");
 
                     var barGraph = new Chart(graphTarget, {
-                        type: 'bar',
+                        type: 'line',
                         data: chartdata
                     });
                 });
