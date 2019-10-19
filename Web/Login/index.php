@@ -63,7 +63,7 @@ echo "Hallo Benutzer mit der ID: ".$userid;
  </tr>
  <tr>
   <td>Strom</td>
-  <td><?php echo '<pre>'; print_r($data["0"]["Strom"]); echo '</pre>'; ?></td>
+  <td><?php print_r($data["0"]["Strom"]); ?></td>
  </tr>
  <tr>
   <td>Spannung</td>
