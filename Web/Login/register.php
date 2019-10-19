@@ -16,7 +16,7 @@ $pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
     <!-- Custom styles for this template -->
     <link href="../assets/css/register.css" rel="stylesheet">
   </head> 
-<body class="text-centered">
+<body class="text-center">
  
 <?php
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
