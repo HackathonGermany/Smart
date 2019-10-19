@@ -56,6 +56,7 @@ foreach ($result as $row) {
           border-bottom: 1px solid #ddd;
           border-right:  1px solid #ddd;
           border-left:   1px solid #ddd;
+          border-top:    1px solid #ddd;
         }
         table {    
           text-align:center; 
@@ -119,18 +120,27 @@ foreach ($result as $row) {
       <input type="radio" name="relais1" value="1"> An<br>
     </td>
     </tr>
-
-    <p>Relais 2:</p>
+    <tr>
+    <td>Relais 2:</td>
+    <td>
       <input type="radio" name="relais2" value="0"> Aus<br>
       <input type="radio" name="relais2" value="1"> An<br>
-
-    <p>Relais 3:</p>
+      </td>
+    </tr>
+    <tr>
+    <td>Relais 3:</td>
+    <td>
       <input type="radio" name="relais3" value="0"> Aus<br>
       <input type="radio" name="relais3" value="1"> An<br>
-
-    <p>Relais 4:</p>
+      </td>
+    </tr>
+    <tr>
+    <td>Relais 4:</td>
+    <td>
       <input type="radio" name="relais4" value="0"> Aus<br>
       <input type="radio" name="relais4" value="1"> An<br>
+      </td>
+    </tr>
     </table>
     <input type="submit" value="Submit">
     </form>
