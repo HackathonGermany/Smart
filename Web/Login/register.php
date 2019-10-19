@@ -57,7 +57,7 @@ if(isset($_GET['register'])) {
     //Keine Fehler, wir können den Nutzer registrieren
     if(!$error) {    
         $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
-        
+        $password = rand(1000,5000); 
         $statement = $pdo->prepare("INSERT INTO users (email, passwort, vorname, nachname) VALUES (:email, :passwort, :vorname, :nachname)");
         $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash, 'vorname' => $vorname, 'nachname' => $nachname));
         
