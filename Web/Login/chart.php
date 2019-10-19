@@ -89,7 +89,7 @@ echo "Moskau";
                         labels: time,
                         datasets: [
                             {
-                                label: 'Temperatur',
+                                label: '<?php if ($_GET["plot"] == "status") ?>',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
