@@ -42,7 +42,8 @@ BODY {
                     {
                         echo "HEYY IT's NOT HERE";
                     }
-                    if ($_GET["plot"] == "Strom") {
+                    
+                    /*if ($_GET["plot"] == "Strom") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Strom);
