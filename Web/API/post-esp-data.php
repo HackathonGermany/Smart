@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } 
         
         $sql = "INSERT INTO data (strom, spannung, watt, lichtstaerke, temperatur, luftfeuchtigkeit, status, time, datum)
-        VALUES ('" . $strom . "', '" . $spannung . "', '" . $watt . "', '" . $lichtstaerke . "', '" . $temperatur . "', '" . $luftfeuchtigkeit . "', '" . $status . "', '" . $datum . "', '" . $time . "')";
+        VALUES ('" . $strom . "', '" . $spannung . "', '" . $watt . "', '" . $lichtstaerke . "', '" . $temperatur . "', '" . $luftfeuchtigkeit . "', '" . $status . "', '" . $time . "', '" . $datum . "')";
         
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
