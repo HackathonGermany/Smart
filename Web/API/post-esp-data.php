@@ -13,7 +13,7 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if(!$mysqli){
   die("Connection failed: " . $mysqli->error);
 }
-$query = sprintf("SELECT * FROM ralas");
+$query = sprintf("SELECT * FROM ralays");
 $result = $mysqli->query($query);
 $data = array();
 foreach ($result as $row) {
