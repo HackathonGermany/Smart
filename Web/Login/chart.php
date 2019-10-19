@@ -47,7 +47,7 @@ echo "Moskau";
                     console.log(data);
                     var time = [];
                     var temperatur = [];
-                    <?php if($test263 == "temperatur") { ?>
+                    <?php if($test263 == "Strom") { ?>
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Strom);
