@@ -134,13 +134,15 @@ foreach ($result as $row) {
       <input type="radio" name="relais3" value="1"> An<br>
       </td>
     </tr>
+    <!--
     <tr>
     <td>Relais 4</td>
     <td>
       <input type="radio" name="relais4" value="0"> Aus<br>
       <input type="radio" name="relais4" value="1"> An<br>
       </td>
-    </tr>
+    </tr> 
+    -->
     <tr>
     <td>Best&auml;tigung</td>
     <td>
