@@ -73,6 +73,7 @@ BODY {
                     var barGraph = new Chart(graphTarget, {
                         type: 'line',
                         data: chartdata
+                        margin: 30
                     });
                 });
             }
