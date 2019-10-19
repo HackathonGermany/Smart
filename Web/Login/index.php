@@ -26,7 +26,7 @@ foreach ($result as $row) {
   $data[] = $row;
 }
 
-echo '<pre>'; print_r($data); echo '</pre>';
+echo '<pre>'; print_r($data[MAX(time)]); echo '</pre>';
 ?>
 
 <html>
