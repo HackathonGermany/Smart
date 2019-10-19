@@ -9,3 +9,12 @@ $userid = $_SESSION['userid'];
  
 echo "Hallo User: ".$userid;
 ?>
+
+<html>
+<head>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
+</head>
+<body>
+
+</body>
+</html>
