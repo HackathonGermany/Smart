@@ -19,7 +19,7 @@ $data = array();
 foreach ($result as $row) {
   $data[] = $row;
 }
-echo $data["0"][relays1].$data["0"][relays2].$data["0"][relays3].$data["0"][relays4];
+echo $data["0"][relays1].$data["0"][relays2].$data["0"][relays3].$data["0"][relays4]."<br />";
 $bin = $data["0"][relays1].$data["0"][relays2].$data["0"][relays3].$data["0"][relays4];
 http_response_code($bin);
 
