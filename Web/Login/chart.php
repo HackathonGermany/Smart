@@ -39,7 +39,7 @@ BODY {
                     var temperatur = [];
 
                     for (var i in data) {
-                        time.push(data[i].student_time);
+                        time.push(data[i].time);
                         temperatur.push(data[i].temperatur);
                     }
 
