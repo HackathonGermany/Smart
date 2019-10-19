@@ -65,7 +65,7 @@ if(isset($_GET['register'])) {
         
         if($result) {        
             $echoerror = 'Du wurdest erfolgreich registriert. <a href="verify.php">Zum Login</a>';
-            $link = "192.168.1.179/Login/verify.php?hash=$hash&vorname=$vorname";
+            $link = "192.168.1.179/Login/verify.php?hash=$hash&email=$email";
             sendVermail($email, $vorname, $link);
             $showFormular = false;
         } else {
