@@ -17,7 +17,7 @@ $mail->Port = 587; // TLS only
 $mail->SMTPSecure = 'tls'; // ssl is depracated
 $mail->SMTPAuth = true;
 $mail->Username = "lucas.handy.1234@gmail.com";
-$mail->Password = "LiviT2005";
+$mail->Password = "snrhebluqdyucwed";
 $mail->setFrom("lucas.handy.1234@gmail.com", "DyingEarth");
 $mail->addAddress($email, $username);
 $mail->Subject = 'Welcome to DyingEarth';
