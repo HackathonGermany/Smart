@@ -4,6 +4,23 @@ $dbname = "dyingearth";
 $username = "esp";
 $password = "esp";
 
+define('DB_HOST', '127.0.0.1');
+define('DB_USERNAME', 'esp');
+define('DB_PASSWORD', 'esp');
+define('DB_NAME', 'dyingearth');
+
+$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+if(!$mysqli){
+  die("Connection failed: " . $mysqli->error);
+}
+$query = sprintf("SELECT * FROM ralais");
+$result = $mysqli->query($query);
+$data = array();
+foreach ($result as $row) {
+  $data[] = $row;
+}
+echo $data["0"][relays1].$data["0"][relays2].$data["0"][relays3].$data["0"][relays4];
+
 // Keep this API Key value to be compatible with the ESP32 code provided in the project page. 
 // If you change this value, the ESP32 sketch needs to match
 $api_key_value = "tPmAT5Ab3j7F9";
