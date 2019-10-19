@@ -4,6 +4,6 @@ $vorname = $_GET["vorname"];
 
 if(isset($hash) && isset($vorname)) 
 {
-    
+    header("Location: /");
 }
 ?>
