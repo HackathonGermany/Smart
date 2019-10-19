@@ -107,6 +107,18 @@ foreach ($result as $row) {
      </tr>
     </table>
 
+    <?php if (isset($_GET["plot"]))
+    {
+      $test54321 = 'chart.php?plot='.$_GET["plot"].'';
+    } else {
+      $test54321 = 'chart.php?plot=temperatur';
+    }
+    ?>
+
+    <p align="center">
+    <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
+    </p>
+
     <form formmethod="get" action="index.php">
     <table>
     <tr>
@@ -186,15 +198,6 @@ foreach ($result as $row) {
       $data[] = $row;
     }*/
     ?>
-
-    <?php if (isset($_GET["plot"]))
-    {
-      $test54321 = 'chart.php?plot='.$_GET["plot"].'';
-    } else {
-      $test54321 = 'chart.php?plot=temperatur';
-    }
-    ?>
-    <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
 
 </body>
 </html>
