@@ -60,10 +60,10 @@ BODY {
                     var options: {
                         layout: {
                             padding: {
-                            left: 0,
-                            right: 50,
-                            top: 0,
-                            bottom: 0
+                                left: 0,
+                                right: 50,
+                                top: 0,
+                                bottom: 0
                             }
                         }
                     }
