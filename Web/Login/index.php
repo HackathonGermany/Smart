@@ -12,7 +12,7 @@ echo "Hallo User: ".$userid;
 
 <html>
 <head>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="assets/media/logo.ico">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
 </head>
 <body>
 

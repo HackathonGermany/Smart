@@ -6,7 +6,7 @@ $pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
 <html> 
 <head>
   <title>Registrierung</title>    
-  <link rel="icon" type="image/vnd.microsoft.icon" href="assets/media/logo.ico">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
 </head> 
 <body>
  
