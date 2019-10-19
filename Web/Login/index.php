@@ -53,6 +53,9 @@ foreach ($result as $row) {
         th, td {
           padding: 15px;
           text-align: left;
+          border-bottom: 1px solid #ddd;
+          border-right:  1px solid #ddd;
+          border-left:   1px solid #ddd;
         }
         </style>
         <!-- <meta http-equiv="refresh" content="1; URL=/Login/"> -->
