@@ -59,7 +59,7 @@ BODY {
 
                     var option = {
                       layout: {
-                        padding: {
+                        margin: {
                           left: 0,
                           right: 1,
                           top: 1,
@@ -73,7 +73,6 @@ BODY {
                     var barGraph = new Chart(graphTarget, {
                         type: 'line',
                         data: chartdata
-                        margin: 30
                     });
                 });
             }
