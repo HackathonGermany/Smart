@@ -142,9 +142,9 @@ foreach ($result as $row) {
       </td>
     </tr>
     <tr>
-    <td>
+    <!--<td>-->
     <input type="submit" value="Submit">
-    </td>
+    <!--</td>-->
     </tr>
     </table>
     </form>
