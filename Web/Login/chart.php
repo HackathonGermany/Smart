@@ -10,6 +10,7 @@
     </style>
   </head>
   <body>
+  test
     <div class="chart-container">
       <canvas id="mycanvas"></canvas>
     </div>
