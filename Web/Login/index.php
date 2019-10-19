@@ -67,27 +67,27 @@ echo "Hallo Benutzer mit der ID: ".$userid;
  </tr>
  <tr>
   <td>Spannung</td>
-  <td>Purple</td>
+  <td><?php print_r($data["0"]["Spannung"]); ?></td>
  </tr>
  <tr>
   <td>Watt</td>
-  <td>Yellow</td>
+  <td><?php print_r($data["0"]["Watt"]); ?></td>
  </tr>
  <tr>
   <td>lichtstaerke</td>
-  <td>Purple</td>
+  <td><?php print_r($data["0"]["lichtstaerke"]); ?></td>
  </tr>
  <tr>
   <td>temperatur</td>
-  <td>Yellow</td>
+  <td><?php print_r($data["0"]["temperatur"]); ?></td>
  </tr>
  <tr>
   <td>luftfeuchtigkeit</td>
-  <td>Purple</td>
+  <td><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></td>
  </tr>
  <tr>
   <td>status</td>
-  <td>Purple</td>
+  <td><?php print_r($data["0"]["status"]); ?></td>
  </tr>
 </table>
 
