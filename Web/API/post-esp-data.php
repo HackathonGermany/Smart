@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $luftfeuchtigkeit = test_input($_POST["luftfeuchtigkeit"]);
         $status           = test_input($_POST["status"]);
         $time             = test_input($_POST["time"]);
-
+        $datum             = test_input($_POST["datum"]);
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "INSERT INTO data (strom, spannung, watt, lichtstaerke, temperatur, luftfeuchtigkeit, status, time)
-        VALUES ('" . $strom . "', '" . $spannung . "', '" . $watt . "', '" . $lichtstaerke . "', '" . $temperatur . "', '" . $luftfeuchtigkeit . "', '" . $status . "', '" . $time . "')";
+        $sql = "INSERT INTO data (strom, spannung, watt, lichtstaerke, temperatur, luftfeuchtigkeit, status, time, datum)
+        VALUES ('" . $strom . "', '" . $spannung . "', '" . $watt . "', '" . $lichtstaerke . "', '" . $temperatur . "', '" . $luftfeuchtigkeit . "', '" . $status . "', '" . $time . "', '" . $datum . "')";
         
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";

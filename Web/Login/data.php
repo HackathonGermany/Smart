@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT temperatur, from_unixtime(time, '%Y %D %M %H:%i:%s') FROM data");
+$query = sprintf("SELECT temperatur, datum FROM data");
 
 //execute query
 $result = $mysqli->query($query);
