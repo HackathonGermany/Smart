@@ -3,11 +3,35 @@ session_start();
 $pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
 ?>
 <!DOCTYPE html> 
-<html> 
+<html>
 <head>
-  <title>Registrierung</title>    
-  <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
-</head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registrierung</title> 
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head> 
 <body>
  
 <?php
@@ -65,23 +89,25 @@ if(isset($_GET['register'])) {
 if($showFormular) {
 ?>
  
-<form action="?register=1" method="post">
-E-Mail:<br>
-<input type="email" size="40" maxlength="250" name="email"><br><br>
- 
-Dein Passwort:<br>
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
- 
-Vorname:<br>
-<input type="text" size="40" maxlength="250" name="vorname"><br><br>
- 
-Nachname:<br>
-<input type="text" size="40"  maxlength="250" name="nachname"><br>
-
-Passwort wiederholen:<br>
-<input type="password" size="40" maxlength="250" name="passwort2"><br><br>
- 
-<input type="submit" value="Abschicken">
+ <form class="form-signin" action="?register=1" method="post">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+  <label for="inputForename" class="sr-only">Given name</label>
+  <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" class="form-control" placeholder="Given name" required="">
+  <label for="inputLastname" class="sr-only">Last name</label>
+  <input type="text" id="inputLastname" size="40"  maxlength="250" name="nachname" class="form-control" placeholder="Last name" required="">
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" size="40" maxlength="250" name="passwort" placeholder="Password" required="">
+  <label for="inputPassword2" class="sr-only">Re-enter password</label>
+  <input type="password" id="inputPassword2" class="form-control" size="40" maxlength="250" name="passwort2" placeholder="Re-enter password" required="">
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
 </form>
  
 <?php
