@@ -58,3 +58,8 @@ body {
 input {
     margin-bottom: 10px; 
 }
+#reg {
+    font-family: Arial;
+    text-decoration: none;
+    color: #333;
+  }

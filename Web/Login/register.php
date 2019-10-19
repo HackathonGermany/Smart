@@ -86,13 +86,11 @@ if($showFormular) {
   <input type="password" id="inputPassword2" class="form-control" size="40" maxlength="250" name="passwort2" autofocus="" placeholder="Re-enter password" required="">
   <label for="inputEmail" class="sr-only">Email address</label>
   <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+  <br />
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    <div>
+      <a id="reg" href="/Login/login.php">Already have a Account?</a>
+    </div>
 </form>
  
 <?php
