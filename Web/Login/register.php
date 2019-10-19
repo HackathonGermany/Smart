@@ -77,16 +77,15 @@ if($showFormular) {
  <img class="mb-4" src="../assets/media/logo.svg" alt="" width="75" height="75">
   <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
   <label for="inputForename" class="sr-only">Given name</label>
-  <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" class="form-control" placeholder="Given name" required="">
+  <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" autofocus="" class="form-control" placeholder="Given name" required="">
   <label for="inputLastname" class="sr-only">Last name</label>
-  <input type="text" id="inputLastname" size="40"  maxlength="250" name="nachname" class="form-control" placeholder="Last name" required="">
+  <input type="text" id="inputLastname" size="40"  maxlength="250" name="nachname" autofocus="" class="form-control" placeholder="Last name" required="">
   <label for="inputEmail" class="sr-only">Email address</label>
   <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
-  <br />
   <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" size="40" maxlength="250" name="passwort" placeholder="Password" required="">
+  <input type="password" id="inputPassword" class="form-control" size="40" maxlength="250" name="passwort" autofocus="" placeholder="Password" required="">
   <label for="inputPassword2" class="sr-only">Re-enter password</label>
-  <input type="password" id="inputPassword2" class="form-control" size="40" maxlength="250" name="passwort2" placeholder="Re-enter password" required="">
+  <input type="password" id="inputPassword2" class="form-control" size="40" maxlength="250" name="passwort2" autofocus="" placeholder="Re-enter password" required="">
   <div class="checkbox mb-3">
     <label>
       <input type="checkbox" value="remember-me"> Remember me
