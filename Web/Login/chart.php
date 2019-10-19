@@ -61,9 +61,9 @@ BODY {
                       layout: {
                         padding: {
                           left: 0,
-                          right: 150,
-                          top: 0,
-                          bottom: 0
+                          right: 1,
+                          top: 1,
+                          bottom: 1
                         }
                       }
                     }
