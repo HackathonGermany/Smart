@@ -40,7 +40,7 @@ foreach ($result as $row) {
   $data[] = $row;
 }
 
-echo '<pre>'; print_r($data["0"]["MAX(time)"]); echo '</pre>';
+echo '<pre>'; print_r($data); echo '</pre>';
 
 
 ?>
