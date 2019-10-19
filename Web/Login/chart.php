@@ -39,7 +39,7 @@ BODY {
                     var temperatur = [];
 
                     for (var i in data) {
-                        test = gmdate("Y-m-d\TH:i:s\Z", data[i].time);
+                        test = new Date(data[i].time * 1000).format('h:i:s');
                         time.push(test);                        
                         temperatur.push(data[i].temperatur);
                     }
