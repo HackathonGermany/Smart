@@ -53,7 +53,7 @@ foreach ($result as $row) {
     </head>
 <body>
 <?php
-echo "Hallo Benutzer mit der ID: ".$userid;
+//echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
     <table>
@@ -67,31 +67,31 @@ echo "Hallo Benutzer mit der ID: ".$userid;
      </tr>
      <tr>
       <td>Spannung</td>
-      <td><?php print_r($data["0"]["Spannung"]); ?></td>
+      <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
      </tr>
      <tr>
       <td>Watt</td>
-      <td><?php print_r($data["0"]["Watt"]); ?></td>
+      <td><a href="?plot=Watt"><?php print_r($data["0"]["Watt"]); ?></a></td>
      </tr>
      <tr>
       <td>lichtstaerke</td>
-      <td><?php print_r($data["0"]["lichtstaerke"]); ?></td>
+      <td><a href="?plot=lichtstaerke"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
      </tr>
      <tr>
       <td>temperatur</td>
-      <td><?php print_r($data["0"]["temperatur"]); ?></td>
+      <td><a href="?plot=temperatur"><?php print_r($data["0"]["temperatur"]); ?></a></td>
      </tr>
      <tr>
       <td>luftfeuchtigkeit</td>
-      <td><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></td>
+      <td><a href="?plot=luftfeuchtigkeit"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
      </tr>
      <tr>
       <td>status</td>
-      <td><?php print_r($data["0"]["status"]); ?></td>
+      <td><a href="?plot=status"><?php print_r($data["0"]["status"]); ?></a></td>
      </tr>
     </table>
 
-    <?php echo 'chart.php?plot='.$_GET["plot"].''; $test54321 = 'chart.php?plot='.$_GET["plot"].''?>
+    <?php $test54321 = 'chart.php?plot='.$_GET["plot"].''?>
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
 
     </body>
