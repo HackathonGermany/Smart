@@ -91,7 +91,8 @@ echo "Hallo Benutzer mit der ID: ".$userid;
      </tr>
     </table>
 
-    <iframe style="float:middle;" width="600" height="300" frameborder=0 src="chart.php?plot=<?php echo $plot ?>"></iframe> 
+    <?php echo "chart.php?plot=$plot"; ?>
+    <iframe style="float:middle;" width="600" height="300" frameborder=0 src=""></iframe> 
 
     </body>
 </html>
