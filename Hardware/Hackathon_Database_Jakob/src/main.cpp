@@ -26,25 +26,24 @@ const char *ntpServer = "0.de.pool.ntp.org";
 const long gmtOffset_sec = 3600;
 const int daylightOffset_sec = 3600;
 long int UNIX = 0;
-float CURRENT = 0;
-float VOLTAGE = 0;
-float POWER = 0;
-float INTENSITY = 0;
+const int relay_len = 4;
+const int Relays[] = {2, 3, 4, 5};
+const char unic_rep[] = {30, 31};
+char StateArray[relay_len];
+int RelayValues[relay_len];
+
 String datum;
 String formattedDate;
 String dayStamp;
 String timeStamp;
-int S_1 = 0;
-int S_2 = 0;
-int S_3 = 0;
-int S_4 = 0;
-char StateArray[4];
+
 // Keep this API Key value to be compatible with the PHP code provided in the
 // project page. If you change the apiKeyValue value, the PHP file
 // /post-esp-data.php also needs to have the same key
 String apiKeyValue = "tPmAT5Ab3j7F9";
 #define DHTTYPE DHT11
 #define DHTPIN 14
+
 void printLocalTime() {
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
@@ -55,90 +54,32 @@ void printLocalTime() {
   time(&now);
   UNIX = now;
 }
-void ADC_READ() {
-  int Value;
-  Value = analogRead(35);
-  Value = constrain(Value, 0, 2900);
-  Value = map(Value, 0, 2900, 0, 1000);
-  CURRENT = Value;
+long current_read() {
+  return map(constrain(analogRead(35), 0, 2900), 0, 2900, 0, 1000);
 }
-void Voltage() {
-  int Value;
-  Value = analogRead(34);
-  Value = constrain(Value, 0.0, 3550.0);
-  Value = map(Value, 0.0, 3550.0, 0.0, 12.0);
-  VOLTAGE = Value;
+long voltage_read() {
+  return map(constrain(analogRead(34), 0.0, 3550.0), 0.0, 3550.0, 0.0, 12.0);
 }
-long Leistung(long voltage, long current) {
+long calc_power(long voltage, long current) {
   return voltage * (current / 1000);
 }
-long LDR() {
-  return map(analogRead(32), 0, 4096, 0, 101);
-}
+long ldr_read() { return map(analogRead(32), 0, 4096, 0, 101); }
+
 String date() {
   timeClient.update();
   return timeClient.getFormattedTime();
 }
-void Status() {
-  if (S_1 == 1) {
-    StateArray[0] = '1';
-  }
-  if (S_1 == 0) {
-    StateArray[0] = '0';
-  }
-  if (S_2 == 1) {
-    StateArray[1] = '1';
-  }
-  if (S_2 == 0) {
-    StateArray[1] = '0';
-  }
-  if (S_3 == 1) {
-    StateArray[2] = '1';
-  }
-  if (S_3 == 0) {
-    StateArray[2] = '0';
-  }
-  if (S_4 == 1) {
-    StateArray[3] = '1';
-  }
-  if (S_4 == 0) {
-    StateArray[3] = '0';
-  }
-  StateArray[4] = 0;
-}
-void R1(bool state) {
-  S_1 = state;
-  if (state == 1) {
-    digitalWrite(17, LOW);
-  } else {
-    digitalWrite(17, HIGH);
+void updateStateArray() {
+  for (byte i = 0; i < relay_len; i++) {
+    StateArray[i] = unic_rep[RelaysValues[i]];
   }
 }
-void R2(bool state) {
-  S_2 = state;
-  if (state == 1) {
-    digitalWrite(5, LOW);
-  } else {
-    digitalWrite(5, HIGH);
-  }
-}
-void R3(bool state) {
-  S_3 = state;
-  if (state == 1) {
-    digitalWrite(18, LOW);
-  } else {
-    digitalWrite(18, HIGH);
-  }
-}
-void R4(bool state) {
-  S_4 = state;
-  if (state == 1) {
-    digitalWrite(19, LOW);
-  } else {
-    digitalWrite(19, HIGH);
-  }
+void updateRelays() {
+  for (byte i = 0; i < relay_len; i++)
+    digitalWrite(Relays[i], RelayValues[i]);
 }
 DHT dht(DHTPIN, DHTTYPE);
+
 void setup() {
   Serial.begin(115200);
   analogReadResolution(12);
@@ -149,7 +90,7 @@ void setup() {
     delay(100);
     Serial.print(".");
   }
-  Serial.println("");
+  Serial.println("done");
   Serial.print("Connected to WiFi network with IP Address: ");
   Serial.println(WiFi.localIP());
   configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
@@ -161,10 +102,7 @@ void setup() {
   pinMode(5, OUTPUT);
   pinMode(18, OUTPUT);
   pinMode(19, OUTPUT);
-  R1(0);
-  R2(0);
-  R3(0);
-  R4(0);
+  updateRelays();
 }
 
 void loop() {
@@ -189,7 +127,7 @@ void loop() {
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
 
     String httpRequestData =
-        "api_key=" + apiKeyValue + "&strom=" + String(CURRENT) +
+        "api_key=" + apiKeyValue + "&strom=" + String(c) +
         "&spannung=" + String(VOLTAGE) + "&watt=" + String(POWER) +
         "&lichtstaerke=" + String(INTENSITY) + "&temperatur=" + String(t) +
         "&luftfeuchtigkeit=" + String(h) + "&status=" + String(StateArray) +
