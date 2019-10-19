@@ -60,7 +60,7 @@ BODY {
                     var graphTarget = $("#graphCanvas");
 
                     var barGraph = new Chart(graphTarget, {
-                        type: 'bar',
+                        type: 'line',
                         data: chartdata
                     });
                 });
