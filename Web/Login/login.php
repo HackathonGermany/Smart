@@ -35,7 +35,7 @@ if(isset($_GET['login'])) {
     <!-- Custom styles for this template -->
     <link href="../assets/css/register.css" rel="stylesheet">
 </head> 
-<body>
+<body class="text-center">
  
 <?php 
 if(isset($errorMessage)) {
