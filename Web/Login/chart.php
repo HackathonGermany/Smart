@@ -18,7 +18,7 @@ BODY {
 
 </head>
 <body>
-    <div id="chart-container" sytle="margin:0 auto;">
+    <div id="chart-container" sytle="display: flex; justify-content: center;">
         <canvas id="graphCanvas"></canvas>
     </div>
 
