@@ -38,12 +38,16 @@ BODY {
                     var time = [];
                     var temperatur = [];
 
-                    //if($_GET["plot"] == "Strom") {
+                    if (!isset($_GET["plot"]))
+                    {
+                        echo "HEYY IT's NOT HERE";
+                    }
+                    if ($_GET["plot"] == "Strom") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Strom);
                         }
-                    /*} /*elseif ($_GET["plot"] == "Spannung") {
+                    } /*elseif ($_GET["plot"] == "Spannung") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Spannung);
