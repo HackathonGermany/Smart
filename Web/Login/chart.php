@@ -63,18 +63,6 @@ BODY {
                     var barGraph = new Chart(graphTarget, {
                         type: 'line',
                         data: chartdata
-
-                        options: {
-                            layout: {
-                                padding: {
-                                    left: 50,
-                                    right: 0,
-                                    top: 0,
-                                    bottom: 0
-                                }
-                            }
-                        }
-
                     });
                 });
             }
