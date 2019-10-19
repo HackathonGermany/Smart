@@ -15,7 +15,7 @@ if(isset($_GET['login'])) {
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
         //header("Location: index.php");
-        $succmsg = 'Login erfolgreich. Weiter zu <a href="index.php">internen Bereich'
+        $succmsg = 'Login erfolgreich. Weiter zu <a href="index.php">internen Bereich';
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig";
     }
@@ -54,7 +54,7 @@ if($succmsg != "") {
                     $succmsg
                   </div>";
       echo $successmsg;
-  }
+}
   ?>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
