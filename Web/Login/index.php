@@ -20,6 +20,9 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 $query = sprintf("SELECT MAX(time) FROM data");
 $result = $mysqli->query($query);
 
+$test1234 = $data["0"]["MAX(time)"];
+$query = sprintf("select * from data where time = '".$test1234."'");
+
 //loop through the returned data
 $data = array();
 foreach ($result as $row) {
