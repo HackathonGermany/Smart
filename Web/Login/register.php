@@ -1,6 +1,7 @@
 <?php 
 session_start();
 $pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
+include "mail.php";
 ?>
 <!DOCTYPE html> 
 <html>
@@ -63,6 +64,8 @@ if(isset($_GET['register'])) {
         
         if($result) {        
             echo 'Du wurdest erfolgreich registriert. <a href="verify.php">Zum Login</a>';
+            $link = "test.de";
+            sendVermail($email, $vorname, $link);
             $showFormular = false;
         } else {
             echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
