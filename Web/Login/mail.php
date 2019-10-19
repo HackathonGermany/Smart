@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../assets/vendor/PHPMailer/src/Exception.php';
-require '../assets/vendor/PHPMailer/src/PHPMailer.php';
-require '../assets/vendor/PHPMailer/src/SMTP.php';
+require '../assets/vendor/phpmailer/phpmailer/src/Exception.php';
+require '../assets/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../assets/vendor/phpmailer/phpmailer/src/SMTP.php';
 
 function sendVermail($email, $username, $verlink) {
 
