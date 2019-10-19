@@ -107,9 +107,18 @@ foreach ($result as $row) {
     </table>
 
     <form formmethod="get" action="index.php">
-    <p>Relais 1:</p>
+    <table>
+    <tr>
+      <th>Name</th>
+      <th>Aktionen</th>
+     </tr>
+     <tr>
+    <td>Relais 1:</td>
+    <td>
       <input type="radio" name="relais1" value="0"> Aus<br>
       <input type="radio" name="relais1" value="1"> An<br>
+    </td>
+    </tr>
 
     <p>Relais 2:</p>
       <input type="radio" name="relais2" value="0"> Aus<br>
@@ -122,7 +131,7 @@ foreach ($result as $row) {
     <p>Relais 4:</p>
       <input type="radio" name="relais4" value="0"> Aus<br>
       <input type="radio" name="relais4" value="1"> An<br>
-
+    </table>
     <input type="submit" value="Submit">
     </form>
 
