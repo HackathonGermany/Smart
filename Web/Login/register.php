@@ -16,7 +16,7 @@ $pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
     <!-- Custom styles for this template -->
     <link href="../assets/css/register.css" rel="stylesheet">
   </head> 
-<body>
+<body class="text-centered">
  
 <?php
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
@@ -74,7 +74,7 @@ if($showFormular) {
 ?>
  
  <form class="form-signin" action="?register=1" method="post">
- <img class="mb-4" src="../assets/media/logo.svg" alt="" width="72" height="72">
+ <img class="mb-4" src="../assets/media/logo.svg    " alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
   <label for="inputForename" class="sr-only">Given name</label>
   <input type="text" name="vorname" size="40" maxlength="250" id="inputForename" class="form-control" placeholder="Given name" required="">
