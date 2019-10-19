@@ -1,9 +1,8 @@
 #include <Arduino.h>
 
-int relays[] = {3,4,5,6,7,8,9};
-int relay_len = 7;
+const int relays[] = {3,4,5,6,7,8,9};
+const int relay_len = 7;
 void setup() {
-  // put your setup code here, to run once:
   for (byte i = 0; i<relay_len;i++){
     pinMode(relays[i],OUTPUT);
   }
@@ -14,15 +13,15 @@ void relay(int num, bool state){
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  for (int i = 0; i < relay_len;i++){
-    relay(i,true);
-    delay(200);
-  }
-  delay(1000);
-  for (int i = relay_len-1; i >= 0;i--){
-    relay(i,false);
-    delay(200);
-  }
-  delay(1000);
+  //example code
+  // for (int i = 0; i < relay_len;i++){
+  //   relay(i,true);
+  //   delay(200);
+  // }
+  // delay(1000);
+  // for (int i = relay_len-1; i >= 0;i--){
+  //   relay(i,false);
+  //   delay(200);
+  // }
+  // delay(1000);
 }

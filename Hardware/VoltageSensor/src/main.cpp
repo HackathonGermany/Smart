@@ -1,9 +1,12 @@
 #include <Arduino.h>
-
+const int voltageSensor = 0;
 void setup() {
-  // put your setup code here, to run once:
+  pinMode(voltageSensor,INPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  long var = analogRead(voltageSensor);
+  var = map(var,0,255,0,20);
+  Serial.println(String(var)+" V");
 }
