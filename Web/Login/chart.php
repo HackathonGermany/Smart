@@ -23,7 +23,7 @@ if (!isset($_GET["plot"]))
 {
     echo "HEYY IT's NOT HERE";
 }
-?>
+?><!--
     <div id="chart-container" sytle="display: flex; justify-content: center;">
         <canvas id="graphCanvas"></canvas>
     </div>
@@ -120,7 +120,7 @@ if (!isset($_GET["plot"]))
                 });
             }
         }
-        </script>
+        </script>-->
 
 </body>
 </html>
