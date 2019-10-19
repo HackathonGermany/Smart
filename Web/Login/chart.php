@@ -20,11 +20,8 @@ BODY {
 <body>
 <?php
 
-echo $_GET["plot"];
 $test263 = $_GET["plot"];
-if($test263 == "temperatur") {
-echo "Moskau";
-}
+
 
 ?>
     <div id="chart-container" sytle="display: flex; justify-content: center;">
