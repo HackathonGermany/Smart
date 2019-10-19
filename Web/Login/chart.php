@@ -43,17 +43,17 @@ echo "Moskau";
                 $.post("data.php",
                 function (data)
                 {
-                    $test263 = $_GET["plot"];
+                    <?php $test263 = $_GET["plot"]; ?>
                     console.log(data);
                     var time = [];
                     var temperatur = [];
-                    if($test263 == "temperatur") {
+                    <?php if($test263 == "temperatur") { ?>
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Strom);
                         }
-                    }
-                     /*elseif ($_GET["plot"] == "Spannung") {
+                    <?php } ?>
+                    /*elseif ($_GET["plot"] == "Spannung") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Spannung);
