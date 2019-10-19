@@ -38,11 +38,41 @@ BODY {
                      var time = [];
                     var temperatur = [];
 
-                    for (var i in data) {
-                        //test = "test";
-                        //test = new Date(data[i].time * 1000).format('h:i:s');
-                        time.push(data[i].datum);                        
-                        temperatur.push(data[i].temperatur);
+                    if ($_GET["plot"] == "Strom") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
+                    } elseif ($_GET["plot"] == "Spannung") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
+                    } elseif ($_GET["plot"] == "Watt") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
+                    } elseif ($_GET["plot"] == "lichtstaerke") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
+                    } elseif ($_GET["plot"] == "temperatur") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
+                    } elseif ($_GET["plot"] == "luftfeuchtigkeit") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
+                    } elseif ($_GET["plot"] == "status") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].temperatur);
+                        }
                     }
 
                     var chartdata = {

@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT temperatur, datum FROM data");
+$query = sprintf("SELECT Strom, Spannung, Watt, lichtstaerke, temperatur, luftfeuchtigkeit, status, datum FROM data");
 
 //execute query
 $result = $mysqli->query($query);
