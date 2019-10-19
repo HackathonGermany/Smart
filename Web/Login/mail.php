@@ -188,6 +188,7 @@ $mail->msgHTML("<!doctype html>
   </body>
 </html>"); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = 'HTML messaging not supported';
+$mail->send()
 // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
 
 //if(!$mail->send()){
