@@ -124,21 +124,21 @@ foreach ($result as $row) {
       $data[] = $row;
     }
 
-    $query = sprintf('UPDATE ralais SET relays2="'.$relais2.'" WHERE id=1;');
+    $query = sprintf('UPDATE ralays SET relays2="'.$relais2.'" WHERE id=1;');
     $result = $mysqli->query($query);
     $data = array();
     foreach ($result as $row) {
       $data[] = $row;
     }
 
-    $query = sprintf('UPDATE ralais SET relays3="'.$relais3.'" WHERE id=1;');
+    $query = sprintf('UPDATE ralays SET relays3="'.$relais3.'" WHERE id=1;');
     $result = $mysqli->query($query);
     $data = array();
     foreach ($result as $row) {
       $data[] = $row;
     }
 
-    $query = sprintf('UPDATE ralais SET relays4="'.$relais4.'" WHERE id=1;');
+    $query = sprintf('UPDATE ralays SET relays4="'.$relais4.'" WHERE id=1;');
     $result = $mysqli->query($query);
     $data = array();
     foreach ($result as $row) {
