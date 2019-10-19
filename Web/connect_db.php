@@ -10,7 +10,6 @@
      $value1 = "'".'mysql:host='.$dbhost.';dbname='.$db.''."'";
      echo $value1;
      #$pdo = new PDO($value1, $dbuser, $dbpass);
-     $pdo = new PDO('mysql:host='.$dbhost.';dbname='.$db.'', 'root', '');
      return $conn;
      }
      

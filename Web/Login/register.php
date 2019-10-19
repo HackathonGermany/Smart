@@ -1,9 +1,6 @@
 <?php 
 session_start();
-include 'connect_db.php';
-$conn = OpenCon();
-echo "Connected Successfully";
-CloseCon($conn);
+$pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
 ?>
 <!DOCTYPE html> 
 <html> 
@@ -20,7 +17,9 @@ if(isset($_GET['register'])) {
     $email = $_POST['email'];
     $passwort = $_POST['passwort'];
     $passwort2 = $_POST['passwort2'];
-  
+    $vorname = $_POST['vorname'];
+    $nachname = $_POST['nachname'];
+
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
         $error = true;
@@ -50,7 +49,7 @@ if(isset($_GET['register'])) {
     if(!$error) {    
         $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
         
-        $statement = $pdo->prepare("INSERT INTO users (email, passwort) VALUES (:email, :passwort)");
+        $statement = $pdo->prepare("INSERT INTO users (email, passwort, vorname, nachname) VALUES (:email, :passwort, :vorname, :nachname)");
         $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
         
         if($result) {        
@@ -72,6 +71,12 @@ E-Mail:<br>
 Dein Passwort:<br>
 <input type="password" size="40"  maxlength="250" name="passwort"><br>
  
+Vorname:<br>
+<input type="text" size="40" maxlength="250" name="vorname"><br><br>
+ 
+Nachname:<br>
+<input type="text" size="40"  maxlength="250" name="nachname"><br>
+
 Passwort wiederholen:<br>
 <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
  
