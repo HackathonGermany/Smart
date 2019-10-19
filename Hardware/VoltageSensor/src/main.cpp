@@ -8,6 +8,6 @@ void setup() {
 
 void loop() {
   long var = analogRead(voltageSensor);
-  var = map(var,0,255,0,20);
+  var = map(var,0,1023,0,20);
   Serial.println(String(var)+" V");
 }
