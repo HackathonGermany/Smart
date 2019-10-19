@@ -23,7 +23,7 @@ BODY {
 echo $_GET["plot"];
 $test263 = $_GET["plot"];
 if($test263 == "temperatur") {
-
+echo "Moskau";
 }
 
 ?><!--
