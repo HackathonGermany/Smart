@@ -24,8 +24,16 @@ if(isset($_GET['login'])) {
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>Login</title>    
-  <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title> 
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/register.css" rel="stylesheet">
 </head> 
 <body>
  
@@ -34,15 +42,21 @@ if(isset($errorMessage)) {
     echo $errorMessage;
 }
 ?>
- 
-<form action="?login=1" method="post">
-E-Mail:<br>
-<input type="email" size="40" maxlength="250" name="email"><br><br>
- 
-Dein Passwort:<br>
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
- 
-<input type="submit" value="Abschicken">
-</form> 
+
+<form class="form-signin" action="?login=1" method="post">
+ <img class="mb-4" src="../assets/media/logo.svg" alt="" width="75" height="75">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" size="40" maxlength="250" class="form-control" placeholder="Email address" required="" name="email" autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" size="40" maxlength="250" name="passwort" autofocus="" placeholder="Password" required="">
+  <br />
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <br />
+    <div>
+      <a id="reg" href="/Login/register.php">Don't have a Account?</a>
+    </div>
+</form>
+
 </body>
 </html>
