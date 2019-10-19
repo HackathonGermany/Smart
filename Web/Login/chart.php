@@ -89,7 +89,7 @@ echo "Moskau";
                         labels: time,
                         datasets: [
                             {
-                                label: '<?php $_GET["plot"] ?>',
+                                label: '<?php echo $_GET["plot"]; ?>',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
