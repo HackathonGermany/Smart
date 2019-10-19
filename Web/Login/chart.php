@@ -19,10 +19,9 @@ BODY {
 </head>
 <body>
 <?php
-if (!isset($_GET["plot"]))
-{
+
     echo "HEYY IT's NOT HERE";
-}
+    echo "viescher";
 ?><!--
     <div id="chart-container" sytle="display: flex; justify-content: center;">
         <canvas id="graphCanvas"></canvas>
