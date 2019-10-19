@@ -91,6 +91,26 @@ foreach ($result as $row) {
      </tr>
     </table>
 
+    <form formmethod="get" action="index.php">
+    <p>Relais 1:</p>
+      <input type="radio" name="relais1" value="0"> Aus<br>
+      <input type="radio" name="relais1" value="1"> An<br>
+
+    <p>Relais 2:</p>
+      <input type="radio" name="relais2" value="0"> Aus<br>
+      <input type="radio" name="relais2" value="1"> An<br>
+
+    <p>Relais 3:</p>
+      <input type="radio" name="relais3" value="0"> Aus<br>
+      <input type="radio" name="relais3" value="1"> An<br>
+
+    <p>Relais 4:</p>
+      <input type="radio" name="relais4" value="0"> Aus<br>
+      <input type="radio" name="relais4" value="1"> An<br>
+
+    <input type="submit" value="Submit">
+    </form>
+
     <?php $test54321 = 'chart.php?plot='.$_GET["plot"].''?>
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
 
