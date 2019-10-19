@@ -24,6 +24,7 @@ if(isset($_GET['login'])) {
 <html> 
 <head>
   <title>Login</title>    
+  <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/media/logo.ico">
 </head> 
 <body>
  
