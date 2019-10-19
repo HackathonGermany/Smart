@@ -20,7 +20,7 @@
     <script type="text/javascript">
     $(document).ready(function(){
   $.ajax({
-    url : "http://localhost/Login/data.php",
+    url : "http://192.168.1.179/Login/data.php",
     type : "GET",
     success : function(data){
       console.log(data);
