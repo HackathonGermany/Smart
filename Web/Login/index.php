@@ -26,7 +26,7 @@ foreach ($result as $row) {
   $data[] = $row;
 }
 
-echo str($data[]);
+echo '<pre>'; print_r($data); echo '</pre>';
 ?>
 
 <html>
