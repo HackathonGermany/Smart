@@ -18,11 +18,9 @@ BODY {
 
 </head>
 <body>
-    <center>
-    <div id="chart-container">
+    <div id="chart-container" sytle="margin:0 auto;">
         <canvas id="graphCanvas"></canvas>
     </div>
-    </center>
 
     <script>
         $(document).ready(function () {
