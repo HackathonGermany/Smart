@@ -17,9 +17,9 @@ $statement = $pdo->prepare("SELECT * FROM 'users' WHERE vorname = :vorname");
 $result = $statement->execute(array('vorname' => $unsafevorname));
 $user = $statement->fetch();
 echo $user['hash'];
-echo "<br />"
+echo "<br />";
 echo $unsafehash;
-echo "<br />"
+echo "<br />";
 if($user['hash'] == $unsafehash)
 {
     echo "verified!";
