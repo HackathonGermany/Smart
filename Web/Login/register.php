@@ -81,7 +81,7 @@ if($showFormular) {
  <img class="mb-4" src="../assets/media/logo.svg" alt="" width="75" height="75">
   <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
   <?php
-  if(!$echoerror) {
+  if($echoerror != "") {
       $errormsg = "<div class='alert alert-danger' role='alert'>
                     $echoerror
                   </div>";
