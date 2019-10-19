@@ -1,6 +1,6 @@
 <?php
-$servername = "192.168.1.179";
-$dbname = "dyingeart";
+$servername = "localhost";
+$dbname = "dyingearth";
 $username = "esp";
 $password = "esp";
 
