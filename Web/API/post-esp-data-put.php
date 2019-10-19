@@ -54,4 +54,8 @@ function test_input($data) {
     return $data;
 }
 ?>
+
+<form action="post-esp-data-put.php">
 <input type="text">
+<input type="submit" value="Submit">
+</form>
