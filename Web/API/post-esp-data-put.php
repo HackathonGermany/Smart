@@ -1,27 +1,23 @@
 <?php
-$servername = "localhost";
-$dbname = "dyingearth";
+$servername = "192.168.1.179";
+$dbname = "dyingeart";
 $username = "esp";
 $password = "esp";
 
 // Keep this API Key value to be compatible with the ESP32 code provided in the project page. 
 // If you change this value, the ESP32 sketch needs to match
 $api_key_value = "tPmAT5Ab3j7F9";
-
+echo $api_key_value;
 $api_key= $sensor = $location = $value1 = $value2 = $value3 = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $api_key = test_input($_POST["api_key"]);
+//if ($_SERVER["REQUEST_METHOD"] == "PUT") {
+    $api_key = test_input($_PUT["api_key"]);
     if($api_key == $api_key_value) {
-        $strom            = test_input($_POST["strom"]);
-        $spannung         = test_input($_POST["spannung"]);
-        $watt             = test_input($_POST["watt"]);
-        $lichtstaerke     = test_input($_POST["lichtstaerke"]);
-        $temperatur       = test_input($_POST["temperatur"]);
-        $luftfeuchtigkeit = test_input($_POST["luftfeuchtigkeit"]);
-        $status           = test_input($_POST["status"]);
-        $time             = test_input($_POST["time"]);
-
+        $sensor = test_input($_PUT["sensor"]);
+        $location = test_input($_PUT["location"]);
+        $value1 = test_input($_PUT["value1"]);
+        $value2 = test_input($_PUT["value2"]);
+        $value3 = test_input($_PUT["value3"]);
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -30,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "INSERT INTO data (strom, spannung, watt, lichtstaerke, temperatur, luftfeuchtigkeit, status, time)
-        VALUES ('" . $strom . "', '" . $spannung . "', '" . $watt . "', '" . $lichtstaerke . "', '" . $temperatur . "', '" . $luftfeuchtigkeit . "', '" . $status . "', '" . $time . "')";
+        $sql = "INSERT INTO SensorData (sensor, location, value1, value2, value3)
+        VALUES ('" . $sensor . "', '" . $location . "', '" . $value1 . "', '" . $value2 . "', '" . $value3 . "')";
         
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
@@ -46,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Wrong API Key provided.";
     }
 
-}
+/*}
 else {
-    echo "No data posted with HTTP POST.";
-}
+    echo "No data posted with HTTP PUT.";
+}*/
 
 function test_input($data) {
     $data = trim($data);
@@ -57,3 +53,9 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+?>
+
+<form action="post-esp-data-put.php">
+<input type="text">
+<input type="submit" value="Submit">
+</form>
