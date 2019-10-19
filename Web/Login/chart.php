@@ -35,15 +35,15 @@ BODY {
                 function (data)
                 {
                     console.log(data);
-                     var time = [];
+                    var time = [];
                     var temperatur = [];
 
-                    if ($_GET["plot"] == "Strom") {
-                        //for (var i in data) {
-                            //time.push(data[i].datum);                        
-                            //temperatur.push(data[i].Strom);
-                        //}
-                    } /*elseif ($_GET["plot"] == "Spannung") {
+                    //if($_GET["plot"] == "Strom") {
+                        for (var i in data) {
+                            time.push(data[i].datum);                        
+                            temperatur.push(data[i].Strom);
+                        }
+                    /*} /*elseif ($_GET["plot"] == "Spannung") {
                         for (var i in data) {
                             time.push(data[i].datum);                        
                             temperatur.push(data[i].Spannung);
