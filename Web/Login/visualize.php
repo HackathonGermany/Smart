@@ -18,7 +18,7 @@ $result = mysqli_query($connect, $query);
 $rows = array();
 $table = array();
 
-$table['data'] = array(
+$table['cols'] = array(
  array(
   'label' => 'Date Time', 
   'type' => 'datetime'
@@ -43,7 +43,7 @@ while($row = mysqli_fetch_array($result))
      "c" => $sub_array
     );
 }
-$table['data'] = $rows;
+$table['rows'] = $rows;
 $jsonTable = json_encode($table);
 
 ?>
