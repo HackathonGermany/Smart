@@ -39,8 +39,9 @@ BODY {
                     var temperatur = [];
 
                     for (var i in data) {
-                        time.push(data[i].time);
-                        temperatur.push(gmdate("Y-m-d\TH:i:s\Z", data[i].temperatur));
+                        test = gmdate("Y-m-d\TH:i:s\Z", data[i].time);
+                        time.push(test);                        
+                        temperatur.push(data[i].temperatur);
                     }
 
                     var chartdata = {
