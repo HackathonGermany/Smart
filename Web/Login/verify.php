@@ -16,15 +16,13 @@ $result = $statement->execute(array('email' => $email));
 $user = $statement->fetch();
 if($user['hash'] == $hash)
 {
+    define('DB_HOST', '127.0.0.1');
+    define('DB_USERNAME', 'esp');
+    define('DB_PASSWORD', 'esp');
+    define('DB_NAME', 'dyingearth');
+    $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $query = sprintf("UPDATE users SET isv=1 WHERE email='".$email."' AND hash='".$hash."';");
     echo "verified!";
-
-    $sql = "UPDATE users SET isv=1 WHERE email=':emaillo' AND hash=':hashlo'";
-
-    $statement = $pdo->prepare($sql);
-    $statement->bindValue(":emaillo", $email);
-    $statement->bindValue(":hashlo", $hash);
-    $count = $statement->execute();
-
 } else {
     echo "Hash or given name is invalid!";
 }
