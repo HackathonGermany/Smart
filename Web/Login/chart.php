@@ -15,8 +15,8 @@
     </div>
     
     <!-- javascript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/Chart.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
   $.ajax({
