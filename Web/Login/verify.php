@@ -2,18 +2,21 @@
 
 $pdo = new PDO('mysql:host=localhost;dbname=dyingearth', 'esp', 'esp');
 
-$hash    = $_GET["hash"];
-$vorname = $_GET["vorname"];
+$unsafehash    = $_GET["hash"];
+$unsafevorname = $_GET["vorname"];
 
-if(!isset($hash) || !isset($vorname)) 
+if(!isset($unsafehash) || !isset($unsafevorname)) 
 {
     header("Location: /");
 }
 
-$statement = $pdo->prepare("SELECT * FROM 'users' WHERE vorname = :vorname");
+$hash = mysqli_real_escape_string($pdo, $unsafehash);
+$vorname = mysqli_real_escape_string($pdo, $unsafevorname);
+
+$statement = $pdo->prepare("SELECT * FROM users WHERE vorname = :vorname");
 $result = $statement->execute(array('vorname' => $vorname));
 $user = $statement->fetch();
-if($user['hash'] == $hash)
+if($user['hash'] == $unsafehash)
 {
     echo "verified!";
 } else {
