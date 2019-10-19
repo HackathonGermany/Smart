@@ -57,6 +57,12 @@ foreach ($result as $row) {
           border-right:  1px solid #ddd;
           border-left:   1px solid #ddd;
         }
+        table {    
+          text-align:center; 
+          margin-left:auto; 
+          margin-right:auto; 
+          width:100px;
+        }
         </style>
         <!-- <meta http-equiv="refresh" content="1; URL=/Login/"> -->
     </head>
