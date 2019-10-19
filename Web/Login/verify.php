@@ -2,7 +2,7 @@
 $hash    = $_GET["hash"];
 $vorname = $_GET["vorname"];
 
-if(isset($hash) && isset($vorname)) 
+if(!isset($hash) && !isset($vorname)) 
 {
     header("Location: /");
 }
