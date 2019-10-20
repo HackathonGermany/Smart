@@ -43,8 +43,7 @@ foreach ($result as $row) {
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <meta lang="deDE" charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <meta lang="deDE" charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" href="https://stsackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -74,18 +73,17 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
 
+<!-- Trigger the modal with a button -->
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="stromModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Strom - Graph</h4>
       </div>
       <div class="modal-body">
         <p>Some text in the modal.</p>
@@ -109,7 +107,7 @@ foreach ($result as $row) {
   <tbody>
     <tr>
       <td>Strom</td>
-      <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td><a ><?php print_r($data["0"]["Strom"]); ?></a></td>
     </tr>
     <tr>
       <td>Spannung</td>
