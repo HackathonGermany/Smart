@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$pdo = new PDO('mysql:host=192.168.1.179;dbname=dyingearth', 'esp', 'esp');
+$pdo = new PDO('mysql:host=localhost;dbname=dyingearth', 'esp', 'esp');
 include "mail.php";
 ?>
 <!DOCTYPE html> 
