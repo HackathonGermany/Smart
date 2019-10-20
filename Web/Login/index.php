@@ -298,6 +298,9 @@ foreach ($result as $row) {
       <input type="radio" name="relais1" value="200"> Purple<br>
       <input type="radio" name="relais1" value="203"> Cyan<br>
       <input type="radio" name="relais1" value="206"> White<br>
+      <input type="radio" name="relais1" value="501"> Fan on<br>
+      <input type="radio" name="relais1" value="502"> Fan off<br>
+      <input type="radio" name="relais1" value="403"> All off<br>
     </td>
     </tr>
     <tr>
