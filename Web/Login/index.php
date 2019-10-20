@@ -123,16 +123,21 @@ foreach ($result as $row) {
     <table>
     <tr>
       <th>Name</th>
-      <th>Aktionen</th>
+      <th>Farbe</th>
      </tr>
      <tr>
-    <td>Relais 1</td>
+    <td>LED-Band</td>
     <td>
-      <input type="radio" name="relais1" value="0"> Aus<br>
-      <input type="radio" name="relais1" value="1"> An<br>
+      <input type="radio" name="relais1" value="100"> Red<br>
+      <input type="radio" name="relais1" value="010"> Green<br>
+      <input type="radio" name="relais1" value="001"> Aus<br>
+      <input type="radio" name="relais1" value="110"> Aus<br>
+      <input type="radio" name="relais1" value="101"> Aus<br>
+      <input type="radio" name="relais1" value="011"> Aus<br>
+      <input type="radio" name="relais1" value="111"> Aus<br>
     </td>
     </tr>
-    <tr>
+    <!--<tr>
     <td>Relais 2</td>
     <td>
       <input type="radio" name="relais2" value="0"> Aus<br>
@@ -145,7 +150,7 @@ foreach ($result as $row) {
       <input type="radio" name="relais3" value="0"> Aus<br>
       <input type="radio" name="relais3" value="1"> An<br>
       </td>
-    </tr>
+    </tr> -->
     <!--
     <tr>
     <td>Relais 4</td>
