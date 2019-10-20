@@ -87,8 +87,8 @@ foreach ($result as $row) {
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Daten</h1>
         <div class="lead">
-<table class="table table-hover table-responsive">
-  <thead>
+          <table class="table table-hover table-dark">
+      <thead>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Wert</th>
@@ -147,7 +147,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Strom - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Strom - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Strom"></iframe> 
@@ -167,7 +167,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Spannung - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Spannung - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Spannung"></iframe> 
@@ -187,7 +187,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Watt - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Watt - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Watt"></iframe> 
@@ -207,7 +207,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Lichtstärke - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Lichtstärke - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=lichtstaerke"></iframe> 
@@ -227,7 +227,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Temperatur - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Temperatur - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=temperatur"></iframe> 
@@ -247,7 +247,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Leuftfeuchtigkeit - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Leuftfeuchtigkeit - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=luftfeuchtigkeit"></iframe> 
@@ -267,7 +267,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Status - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Status - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=status"></iframe> 
@@ -282,61 +282,6 @@ foreach ($result as $row) {
 
 
 </div>
-
-<div>
-<table class="table table-hover table-responsive">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Wert</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Strom</td>
-      <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
-    </tr>
-    <tr>
-      <td>Spannung</td>
-      <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
-    </tr>
-    <tr>
-      <td>Watt</td>
-      <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
-    </tr>
-    <tr>
-      <td>Lichtstärke</td>
-      <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
-     </tr>
-     <tr>
-      <td>Temperatur</td>
-      <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
-     </tr>
-     <tr>
-      <td>Luftfeuchtigkeit</td>
-      <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
-     </tr>
-     <tr>
-      <td>Status</td>
-      <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
-     </tr>
-    </tr>
-  </tbody> 
-</table>
-</div>
-
-    <?php if (isset($_GET["plot"]))
-    {
-      $test54321 = 'chart.php?plot='.$_GET["plot"].'';
-    } else {
-      $test54321 = 'chart.php?plot=temperatur';
-    }
-    ?>
-
-    <!-- <p style="align: 'center';">
-    <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
-    </p> -->
-
     <form formmethod="get" action="index.php">
     <table>
     <tr>
@@ -355,31 +300,8 @@ foreach ($result as $row) {
       <input type="radio" name="relais1" value="206"> White<br>
     </td>
     </tr>
-    <!--<tr>
-    <td>Relais 2</td>
-    <td>
-      <input type="radio" name="relais2" value="0"> Aus<br>
-      <input type="radio" name="relais2" value="1"> An<br>
-      </td>
-    </tr>
     <tr>
-    <td>Relais 3</td>
-    <td>
-      <input type="radio" name="relais3" value="0"> Aus<br>
-      <input type="radio" name="relais3" value="1"> An<br>
-      </td>
-    </tr> -->
-    <!--
-    <tr>
-    <td>Relais 4</td>
-    <td>
-      <input type="radio" name="relais4" value="0"> Aus<br>
-      <input type="radio" name="relais4" value="1"> An<br>
-      </td>
-    </tr> 
-    -->
-    <tr>
-    <td>Best&auml;tigung</td>
+    <td>Bestätigen</td>
     <td>
     <input type="submit" value="Submit">
     </td>
