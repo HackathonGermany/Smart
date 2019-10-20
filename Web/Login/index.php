@@ -72,40 +72,68 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-    <table>
-     <tr>
-      <th>Name</th>
-      <th>Wert</th>
-     </tr>
-     <tr>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Werte</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div>
+<table class="table table-hover table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Wert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td>Strom</td>
-      <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
-     </tr>
-     <tr>
+      <td><a  data-toggle="modal" data-target="#myModal" href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
+    </tr>
+    <tr>
       <td>Spannung</td>
       <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
-     </tr>
-     <tr>
+    </tr>
+    <tr>
       <td>Watt</td>
       <td><a href="?plot=Watt"><?php print_r($data["0"]["Watt"]); ?></a></td>
-     </tr>
-     <tr>
-      <td>lichtstaerke</td>
+    </tr>
+    <tr>
+      <td>Lichtstärke</td>
       <td><a href="?plot=lichtstaerke"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
      </tr>
      <tr>
-      <td>temperatur</td>
+      <td>Temperatur</td>
       <td><a href="?plot=temperatur"><?php print_r($data["0"]["temperatur"]); ?></a></td>
      </tr>
      <tr>
-      <td>luftfeuchtigkeit</td>
+      <td>Luftfeuchtigkeit</td>
       <td><a href="?plot=luftfeuchtigkeit"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
      </tr>
      <tr>
-      <td>status</td>
+      <td>Status</td>
       <td><a href="?plot=status"><?php print_r($data["0"]["status"]); ?></a></td>
      </tr>
-    </table>
+    </tr>
+  </tbody>
+</table>
+</div>
 
     <?php if (isset($_GET["plot"]))
     {
@@ -115,7 +143,7 @@ foreach ($result as $row) {
     }
     ?>
 
-    <p align="center">
+    <p style="align: 'center';">
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
     </p>
 
