@@ -85,8 +85,48 @@ foreach ($result as $row) {
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <h1 class="cover-heading">Daten</h1>
+        <div class="lead">
+<table class="table table-hover table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Wert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strom</td>
+      <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
+    </tr>
+    <tr>
+      <td>Spannung</td>
+      <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
+    </tr>
+    <tr>
+      <td>Watt</td>
+      <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
+    </tr>
+    <tr>
+      <td>Lichtstärke</td>
+      <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
+     </tr>
+     <tr>
+      <td>Temperatur</td>
+      <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
+     </tr>
+     <tr>
+      <td>Luftfeuchtigkeit</td>
+      <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
+     </tr>
+     <tr>
+      <td>Status</td>
+      <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
+     </tr>
+    </tr>
+  </tbody> 
+</table>
+</div>
         <p class="lead">
           <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
         </p>
