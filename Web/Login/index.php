@@ -255,7 +255,7 @@ foreach ($result as $row) {
       <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
      </tr>
     </tr>
-  </tbody>
+  </tbody> 
 </table>
 </div>
 
