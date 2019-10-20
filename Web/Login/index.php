@@ -80,37 +80,30 @@ foreach ($result as $row) {
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
       <td>Strom</td>
       <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
     </tr>
     <tr>
-      <th scope="row">2</th>
       <td>Spannung</td>
       <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
       <td>Watt</td>
       <td><a href="?plot=Watt"><?php print_r($data["0"]["Watt"]); ?></a></td>
     </tr>
     <tr>
-      <th scope="row">4</th>
       <td>Lichtstärke</td>
       <td><a href="?plot=lichtstaerke"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
      </tr>
      <tr>
-      <th scope="row">5</th>
       <td>Temperatur</td>
       <td><a href="?plot=temperatur"><?php print_r($data["0"]["temperatur"]); ?></a></td>
      </tr>
      <tr>
-      <th scope="row">5</th>
       <td>Luftfeuchtigkeit</td>
       <td><a href="?plot=luftfeuchtigkeit"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
      </tr>
      <tr>
-      <th scope="row">5</th>
       <td>Status</td>
       <td><a href="?plot=status"><?php print_r($data["0"]["status"]); ?></a></td>
      </tr>
@@ -126,7 +119,7 @@ foreach ($result as $row) {
     }
     ?>
 
-    <p align="center">
+    <p style="align: 'center';">
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
     </p>
 
