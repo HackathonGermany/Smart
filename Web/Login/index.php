@@ -77,7 +77,7 @@ foreach ($result as $row) {
 
 <!-- Trigger the modal with a button -->
 <!-- Modal -->
-<div id="stromModal" class="modal fade" role="dialog">
+<div id="stromModal" class="modal-lg fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -86,7 +86,7 @@ foreach ($result as $row) {
         <h4 class="modal-title">Strom - Graph</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <iframe style="float:middle;" width="600" height="300" frameborder=0 src="chart.php?plot=strom"></iframe> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
