@@ -73,8 +73,6 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
-
 <div>
 <!-- Modal for Strom-->
 <div id="stromModal" class="modal fade" role="dialog">
