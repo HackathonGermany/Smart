@@ -174,7 +174,7 @@ foreach ($result as $row) {
      <td></td>
      <td></td>
      <td></td>
-    <td>Bestätigen</td>
+    <td></td>
     <td>
     <input type="submit" value="Submit">
     </td>
