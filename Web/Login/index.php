@@ -73,10 +73,8 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
-
-<!-- Trigger the modal with a button -->
-<!-- Modal -->
+<div>
+<!-- Modal for Strom-->
 <div id="stromModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 
@@ -96,6 +94,129 @@ foreach ($result as $row) {
   </div>
 </div>
 
+<!-- Modal for Spannung-->
+<div id="spannungModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Spannung - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=spannung"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for Watt-->
+<div id="wattModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Watt - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=watt"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for Lichtstärke-->
+<div id="lichtstaerkeModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Lichtstärke - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=lichtstaerke"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for temperature-->
+<div id="spannungModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Temperatur - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=temperatur"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for luftfeuchtigkeit-->
+<div id="temperatureModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Leuftfeuchtigkeit - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=luftfeuchtigkeit"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for state-->
+<div id="statusodal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Status - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=status"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+
 <div>
 <table class="table table-hover table-responsive">
   <thead>
@@ -107,7 +228,7 @@ foreach ($result as $row) {
   <tbody>
     <tr>
       <td>Strom</td>
-      <td><a ><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td><div data-toggle="modal" data-target="#stromModal"><?php print_r($data["0"]["Spannung"]); ?></div></td>
     </tr>
     <tr>
       <td>Spannung</td>
