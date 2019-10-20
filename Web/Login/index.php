@@ -45,6 +45,7 @@ foreach ($result as $row) {
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <meta lang="deDE" charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="../assets/css/index.css">
         <link rel="stylesheet" href="https://stsackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -68,10 +69,75 @@ foreach ($result as $row) {
         </style>
         <!-- <meta http-equiv="refresh" content="1; URL=/Login/"> -->
     </head>
-<body>
+<body class="text-center">
 <?php
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Dyingearth</h3>
+          <nav class="nav nav-masthead justify-content-center">
+             <img src="../assets/media/logo.svg" alt="" width="75" height="75">
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Daten</h1>
+        <div class="lead">
+          <table class="table table-hover table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Wert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strom</td>
+      <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
+    </tr>
+    <tr>
+      <td>Spannung</td>
+      <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
+    </tr>
+    <tr>
+      <td>Watt</td>
+      <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
+    </tr>
+    <tr>
+      <td>Lichtstärke</td>
+      <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
+     </tr>
+     <tr>
+      <td>Temperatur</td>
+      <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
+     </tr>
+     <tr>
+      <td>Luftfeuchtigkeit</td>
+      <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
+     </tr>
+     <tr>
+      <td>Status</td>
+      <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
+     </tr>
+    </tr>
+  </tbody> 
+</table>
+</div>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </div>
 
 <div>
 <!-- Modal for Strom-->
@@ -201,7 +267,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Status - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Status - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=status"></iframe> 
