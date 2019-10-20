@@ -84,7 +84,7 @@ foreach ($result as $row) {
         <h4 class="modal-title">Strom - Graph</h4>
       </div>
       <div class="modal-body">
-        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=strom"></iframe> 
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Strom"></iframe> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -104,7 +104,7 @@ foreach ($result as $row) {
         <h4 class="modal-title">Spannung - Graph</h4>
       </div>
       <div class="modal-body">
-        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=spannung"></iframe> 
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Spannung"></iframe> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -124,7 +124,7 @@ foreach ($result as $row) {
         <h4 class="modal-title">Watt - Graph</h4>
       </div>
       <div class="modal-body">
-        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=watt"></iframe> 
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Watt"></iframe> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -267,9 +267,9 @@ foreach ($result as $row) {
     }
     ?>
 
-    <p style="align: 'center';">
+    <!-- <p style="align: 'center';">
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
-    </p>
+    </p> -->
 
     <form formmethod="get" action="index.php">
     <table>
