@@ -90,8 +90,8 @@ foreach ($result as $row) {
           <table class="table table-hover table-dark">
       <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Wert</th>
+      <th scope="col" class="col-sm-3">Name</th>
+      <th scope="col" class="col-sm-3">Wert</th>
     </tr>
   </thead>
   <tbody>
