@@ -16,6 +16,11 @@
 #include <Wire.h>
 WiFiUDP ntpUDP;
 
+struct DHT_return{
+  long temperature;
+  long humidity;
+};
+
 // Replace with your network credentials
 const char *ssid = "EULE-Gast";
 const char *password = "@EULE_Zukunft!";
@@ -65,19 +70,26 @@ long calc_power(long voltage, long current) {
 }
 long ldr_read() { return map(analogRead(32), 0, 4096, 0, 101); }
 
+DHT_return dht_read(){
+  DHT_return return_val;
+  return_val.humidity = dht.readHumidity();
+  return_val.temperature = dht.readTemperature();
+  return return_val;
+}
 String date() {
   timeClient.update();
   return timeClient.getFormattedTime();
 }
 void updateStateArray() {
   for (byte i = 0; i < relay_len; i++) {
-    StateArray[i] = unic_rep[RelaysValues[i]];
+    StateArray[i] = unic_rep[RelayValues[i]];
   }
 }
 void updateRelays() {
   for (byte i = 0; i < relay_len; i++)
     digitalWrite(Relays[i], RelayValues[i]);
 }
+
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
@@ -113,10 +125,6 @@ void loop() {
   LDR();
   DATUM();
   Status();
-  float h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
-  float t = dht.readTemperature();
-  // Check WiFi connection status
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
 
