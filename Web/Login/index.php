@@ -117,7 +117,7 @@ foreach ($result as $row) {
       <td>Lichtstärke</td>
       <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
       <td>//</td>
-      <td>LED-Bar</td>
+      <td class="col-sm-3">LED-Bar</td>
      </tr>
      <tr>
       <td>Temperatur</td>
