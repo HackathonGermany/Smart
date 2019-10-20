@@ -177,7 +177,7 @@ foreach ($result as $row) {
 </div>
 
 <!-- Modal for luftfeuchtigkeit-->
-<div id="temperatureModal" class="modal fade" role="dialog">
+<div id="luftfeuchtigkeitModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
