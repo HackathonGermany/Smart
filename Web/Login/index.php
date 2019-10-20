@@ -102,38 +102,79 @@ foreach ($result as $row) {
       <td>Strom</td>
       <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
       <td>//</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="100">Red</td>
     </tr>
     <tr>
       <td>Spannung</td>
       <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
       <td>//</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="404">Green</td>
     </tr>
     <tr>
       <td>Watt</td>
       <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
       <td>//</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="101">Blue</td>
     </tr>
     <tr>
       <td>Lichtstärke</td>
       <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
       <td>//</td>
-      <td class="col-sm-3">LED-Bar</td>
+      <td class="col-sm-3">LED-Band</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="102">Yellow</td>
      </tr>
      <tr>
       <td>Temperatur</td>
       <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
       <td>//</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="200">Purple</td>
      </tr>
      <tr>
       <td>Luftfeuchtigkeit</td>
       <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
       <td>//</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="203">Cyan</td>
      </tr>
      <tr>
       <td>Status</td>
       <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
       <td>//</td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="206">White</td>
      </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="501">Fan on</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="502">Fan off</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="radio" name="relais1" value="403">All off</td>
+     </tr>
+     <tr>
+    <td>Bestätigen</td>
+    <td>
+    <input type="submit" value="Submit">
+    </td>
+    </tr>
     </tr>
   </tbody> 
 </table>
