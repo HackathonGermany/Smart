@@ -86,7 +86,7 @@ foreach ($result as $row) {
 
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Daten</h1>
-        <div class="lead inline">
+        <div class="lead d-inline-block">
           <table class="table table-hover table-dark">
       <thead>
     <tr>
