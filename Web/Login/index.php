@@ -43,11 +43,13 @@ foreach ($result as $row) {
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <meta lang="deDE" charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <meta lang="deDE" charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="../assets/css/index.css">
         <link rel="stylesheet" href="https://stsackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="icon" type="image/vnd.microsoft.icon" href="assets/media/logo.ico">
         <style>
         th, td {
@@ -67,87 +69,76 @@ foreach ($result as $row) {
         </style>
         <!-- <meta http-equiv="refresh" content="1; URL=/Login/"> -->
     </head>
-<body>
+<body class="text-center">
 <?php
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Dyingearth</h3>
+          <nav class="nav nav-masthead justify-content-center">
+             <img src="../assets/media/logo.svg" alt="" width="75" height="75">
+          </nav>
+        </div>
+      </header>
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Werte</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div>
-<table class="table table-hover table-responsive">
-  <thead>
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Daten</h1>
+        <div class="lead d-inline-block">
+          <table class="table table-hover table-dark">
+      <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Wert</th>
+      <th scope="col" class="col-sm-3">Name</th>
+      <th scope="col" class="col-sm-3">Wert</th>
+      <th scope="col" class="col-sm-3">//</th>
+      <th scope="col" class="col-sm-3">Name</th>
+      <th scope="col" class="col-sm-3">Farbe</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Strom</td>
-      <td><a  data-toggle="modal" data-target="#myModal" href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td>//</td>
     </tr>
     <tr>
       <td>Spannung</td>
-      <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
+      <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
+      <td>//</td>
     </tr>
     <tr>
       <td>Watt</td>
-      <td><a href="?plot=Watt"><?php print_r($data["0"]["Watt"]); ?></a></td>
+      <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
+      <td>//</td>
     </tr>
     <tr>
       <td>Lichtstärke</td>
-      <td><a href="?plot=lichtstaerke"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
+      <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
+      <td>//</td>
+      <td class="col-sm-3">LED-Bar</td>
      </tr>
      <tr>
       <td>Temperatur</td>
-      <td><a href="?plot=temperatur"><?php print_r($data["0"]["temperatur"]); ?></a></td>
+      <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
+      <td>//</td>
      </tr>
      <tr>
       <td>Luftfeuchtigkeit</td>
-      <td><a href="?plot=luftfeuchtigkeit"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
+      <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
+      <td>//</td>
      </tr>
      <tr>
       <td>Status</td>
-      <td><a href="?plot=status"><?php print_r($data["0"]["status"]); ?></a></td>
+      <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
+      <td>//</td>
      </tr>
     </tr>
-  </tbody>
+  </tbody> 
 </table>
 </div>
-
-    <?php if (isset($_GET["plot"]))
-    {
-      $test54321 = 'chart.php?plot='.$_GET["plot"].'';
-    } else {
-      $test54321 = 'chart.php?plot=temperatur';
-    }
-    ?>
-
-    <p style="align: 'center';">
-    <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
-    </p>
-
-    <form formmethod="get" action="index.php">
+<form formmethod="get" action="index.php">
     <table>
     <tr>
       <th>Name</th>
@@ -157,51 +148,186 @@ foreach ($result as $row) {
     <td>LED-Band</td>
     <td>
       <input type="radio" name="relais1" value="100"> Red<br>
-      <input type="radio" name="relais1" value="010"> Green<br>
-      <input type="radio" name="relais1" value="001"> Aus<br>
-      <input type="radio" name="relais1" value="110"> Aus<br>
-      <input type="radio" name="relais1" value="101"> Aus<br>
-      <input type="radio" name="relais1" value="011"> Aus<br>
-      <input type="radio" name="relais1" value="111"> Aus<br>
+      <input type="radio" name="relais1" value="404"> Green<br>
+      <input type="radio" name="relais1" value="101"> Blue<br>
+      <input type="radio" name="relais1" value="102"> Yellow<br>
+      <input type="radio" name="relais1" value="200"> Purple<br>
+      <input type="radio" name="relais1" value="203"> Cyan<br>
+      <input type="radio" name="relais1" value="206"> White<br>
+      <input type="radio" name="relais1" value="501"> Fan on<br>
+      <input type="radio" name="relais1" value="502"> Fan off<br>
+      <input type="radio" name="relais1" value="403"> All off<br>
     </td>
     </tr>
-    <!--<tr>
-    <td>Relais 2</td>
-    <td>
-      <input type="radio" name="relais2" value="0"> Aus<br>
-      <input type="radio" name="relais2" value="1"> An<br>
-      </td>
-    </tr>
     <tr>
-    <td>Relais 3</td>
-    <td>
-      <input type="radio" name="relais3" value="0"> Aus<br>
-      <input type="radio" name="relais3" value="1"> An<br>
-      </td>
-    </tr> -->
-    <!--
-    <tr>
-    <td>Relais 4</td>
-    <td>
-      <input type="radio" name="relais4" value="0"> Aus<br>
-      <input type="radio" name="relais4" value="1"> An<br>
-      </td>
-    </tr> 
-    -->
-    <tr>
-    <td>Best&auml;tigung</td>
+    <td>Bestätigen</td>
     <td>
     <input type="submit" value="Submit">
     </td>
     </tr>
     </table>
     </form>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p><a href="https://dyingearth.de/">Dyingearth</a>, by <a href="https://twitter.com/dyingdevteam">Dyingeath DevTeam</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+<div>
+<!-- Modal for Strom-->
+<div id="stromModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Strom - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Strom"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for Spannung-->
+<div id="spannungModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Spannung - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Spannung"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for Watt-->
+<div id="wattModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Watt - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=Watt"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for Lichtstärke-->
+<div id="lichtstaerkeModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Lichtstärke - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=lichtstaerke"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for temperature-->
+<div id="temperatureModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Temperatur - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=temperatur"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for luftfeuchtigkeit-->
+<div id="luftfeuchtigkeitModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Leuftfeuchtigkeit - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=luftfeuchtigkeit"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for state-->
+<div id="statusModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="color: black;">Status - Graph</h4>
+      </div>
+      <div class="modal-body">
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=status"></iframe> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
 
     <?php
     $relais1 = $_GET["relais1"];
-    $relais2 = $_GET["relais2"];
-    $relais3 = $_GET["relais3"];
-    $relais4 = $_GET["relais4"];
+    //$relais2 = $_GET["relais2"];
+    //$relais3 = $_GET["relais3"];
+    //$relais4 = $_GET["relais4"];
 
     $query = sprintf('UPDATE ralays SET relays1="'.$relais1.'" WHERE id=1;');
     $result = $mysqli->query($query);
@@ -210,7 +336,7 @@ foreach ($result as $row) {
       $data[] = $row;
     }
 
-    $query = sprintf('UPDATE ralays SET relays2="'.$relais2.'" WHERE id=1;');
+    /*$query = sprintf('UPDATE ralays SET relays2="'.$relais2.'" WHERE id=1;');
     $result = $mysqli->query($query);
     $data = array();
     foreach ($result as $row) {
@@ -230,7 +356,7 @@ foreach ($result as $row) {
     foreach ($result as $row) {
       $data[] = $row;
     }*/
-    ?>
+    ?> 
 
 </body>
 </html>

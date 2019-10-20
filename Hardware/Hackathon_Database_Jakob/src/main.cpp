@@ -16,6 +16,11 @@
 #include <Wire.h>
 WiFiUDP ntpUDP;
 
+struct DHT_return {
+  long temperature;
+  long humidity;
+};
+
 // Replace with your network credentials
 const char *ssid = "EULE-Gast";
 const char *password = "@EULE_Zukunft!";
@@ -65,19 +70,26 @@ long calc_power(long voltage, long current) {
 }
 long ldr_read() { return map(analogRead(32), 0, 4096, 0, 101); }
 
+DHT_return dht_read() {
+  DHT_return return_val;
+  return_val.humidity = dht.readHumidity();
+  return_val.temperature = dht.readTemperature();
+  return return_val;
+}
 String date() {
   timeClient.update();
   return timeClient.getFormattedTime();
 }
 void updateStateArray() {
   for (byte i = 0; i < relay_len; i++) {
-    StateArray[i] = unic_rep[RelaysValues[i]];
+    StateArray[i] = unic_rep[RelayValues[i]];
   }
 }
 void updateRelays() {
   for (byte i = 0; i < relay_len; i++)
     digitalWrite(Relays[i], RelayValues[i]);
 }
+
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
@@ -106,17 +118,13 @@ void setup() {
 }
 
 void loop() {
-  printLocalTime();
-  ADC_READ();
-  Voltage();
-  Leistung();
-  LDR();
-  DATUM();
-  Status();
-  float h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
-  float t = dht.readTemperature();
-  // Check WiFi connection status
+  // printLocalTime();
+  // ADC_READ();
+  // Voltage();
+  // Leistung();
+  // LDR();
+  // DATUM();
+  // Status();
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
 
@@ -127,11 +135,11 @@ void loop() {
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
 
     String httpRequestData =
-        "api_key=" + apiKeyValue + "&strom=" + String(c) +
-        "&spannung=" + String(VOLTAGE) + "&watt=" + String(POWER) +
-        "&lichtstaerke=" + String(INTENSITY) + "&temperatur=" + String(t) +
-        "&luftfeuchtigkeit=" + String(h) + "&status=" + String(StateArray) +
-        "&time=" + String(UNIX) + "&datum=" + String(datum) + "";
+        "api_key=" + apiKeyValue + "&strom=" + String(current_read()) +
+        "&spannung=" + String(voltage_read()) + "&watt=" + String(calc_power(voltage_read(),current_read())) +
+        "&lichtstaerke=" + String(ldr_read()) + "&temperatur=" + String(dht_read().temperature) +
+        "&luftfeuchtigkeit=" + String(dht_read().humidity) + "&status=" + String(StateArray) +
+        "&time=" + String(UNIX) + "&datum=" + String(datum);
     Serial.print("httpRequestData: ");
     Serial.println(httpRequestData);
 
