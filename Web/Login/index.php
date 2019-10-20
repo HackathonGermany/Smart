@@ -74,66 +74,49 @@ foreach ($result as $row) {
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Wert</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Strom</td>
+      <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Spannung</td>
+      <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-    <table>
-     <tr>
-      <th>Name</th>
-      <th>Wert</th>
-     </tr>
-     <tr>
-      <td>Strom</td>
-      <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
-     </tr>
-     <tr>
-      <td>Spannung</td>
-      <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
-     </tr>
-     <tr>
       <td>Watt</td>
       <td><a href="?plot=Watt"><?php print_r($data["0"]["Watt"]); ?></a></td>
-     </tr>
-     <tr>
-      <td>lichtstaerke</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Lichtstärke</td>
       <td><a href="?plot=lichtstaerke"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
      </tr>
      <tr>
-      <td>temperatur</td>
+      <th scope="row">5</th>
+      <td>Temperatur</td>
       <td><a href="?plot=temperatur"><?php print_r($data["0"]["temperatur"]); ?></a></td>
      </tr>
      <tr>
-      <td>luftfeuchtigkeit</td>
+      <th scope="row">5</th>
+      <td>Luftfeuchtigkeit</td>
       <td><a href="?plot=luftfeuchtigkeit"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
      </tr>
      <tr>
-      <td>status</td>
+      <th scope="row">5</th>
+      <td>Status</td>
       <td><a href="?plot=status"><?php print_r($data["0"]["status"]); ?></a></td>
      </tr>
-    </table>
+    </tr>
+  </tbody>
+</table>
 
     <?php if (isset($_GET["plot"]))
     {
