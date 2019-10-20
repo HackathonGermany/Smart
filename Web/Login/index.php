@@ -73,8 +73,6 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
-
 <div>
 <!-- Modal for Strom-->
 <div id="stromModal" class="modal fade" role="dialog">
@@ -157,7 +155,7 @@ foreach ($result as $row) {
 </div>
 
 <!-- Modal for temperature-->
-<div id="spannungModal" class="modal fade" role="dialog">
+<div id="temperatureModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
@@ -257,7 +255,7 @@ foreach ($result as $row) {
       <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
      </tr>
     </tr>
-  </tbody>
+  </tbody> 
 </table>
 </div>
 
