@@ -92,7 +92,7 @@ foreach ($result as $row) {
     <tr>
       <th scope="col" class="col-sm-3">Name</th>
       <th scope="col" class="col-sm-3">Wert</th>
-      <th scope="col" class="col-sm-3">#</th>
+      <th scope="col" class="col-sm-3">//</th>
       <th scope="col" class="col-sm-3">Name</th>
       <th scope="col" class="col-sm-3">Farbe</th>
     </tr>
@@ -117,6 +117,7 @@ foreach ($result as $row) {
       <td>Lichtstärke</td>
       <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
       <td>//</td>
+      <td>LED-Bar</td>
      </tr>
      <tr>
       <td>Temperatur</td>
