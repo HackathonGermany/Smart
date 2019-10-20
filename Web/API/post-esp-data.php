@@ -19,9 +19,11 @@ $data = array();
 foreach ($result as $row) {
   $data[] = $row;
 }
-echo $data["0"][relays1]."<br />"; 
-//.$data["0"][relays4]   .$data["0"][relays2].$data["0"][relays3]
+
 $bin = $data["0"][relays1]; 
+echo $bin."<br />"; 
+//.$data["0"][relays4]   .$data["0"][relays2].$data["0"][relays3]
+
 //.$data["0"][relays4]    .$data["0"][relays2].$data["0"][relays3]
 http_response_code($bin);
 #http_response_code(500);

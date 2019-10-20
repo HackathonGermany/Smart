@@ -73,21 +73,20 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
 
+<!-- Trigger the modal with a button -->
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="stromModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Strom - Graph</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=strom"></iframe> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -108,7 +107,7 @@ foreach ($result as $row) {
   <tbody>
     <tr>
       <td>Strom</td>
-      <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td><a ><?php print_r($data["0"]["Strom"]); ?></a></td>
     </tr>
     <tr>
       <td>Spannung</td>
@@ -161,12 +160,12 @@ foreach ($result as $row) {
     <td>LED-Band</td>
     <td>
       <input type="radio" name="relais1" value="100"> Red<br>
-      <input type="radio" name="relais1" value="010"> Green<br>
-      <input type="radio" name="relais1" value="001"> Blue<br>
-      <input type="radio" name="relais1" value="110"> Yellow<br>
-      <input type="radio" name="relais1" value="101"> Purple<br>
-      <input type="radio" name="relais1" value="011"> Cyan<br>
-      <input type="radio" name="relais1" value="111"> White<br>
+      <input type="radio" name="relais1" value="404"> Green<br>
+      <input type="radio" name="relais1" value="101"> Blue<br>
+      <input type="radio" name="relais1" value="102"> Yellow<br>
+      <input type="radio" name="relais1" value="200"> Purple<br>
+      <input type="radio" name="relais1" value="203"> Cyan<br>
+      <input type="radio" name="relais1" value="206"> White<br>
     </td>
     </tr>
     <!--<tr>
