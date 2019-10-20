@@ -98,6 +98,8 @@ foreach ($result as $row) {
     </tr>
   </thead>
   <tbody>
+  <form formmethod="get" action="index.php">
+
     <tr>
       <td>Strom</td>
       <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
@@ -145,7 +147,6 @@ foreach ($result as $row) {
       <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
       <td>//</td>
       <td></td>
-      <form formmethod="get" action="index.php">
       <td><input type="radio" name="relais1" value="206"> White</td>
      </tr>
      <tr>
@@ -173,7 +174,7 @@ foreach ($result as $row) {
      <td></td>
      <td></td>
      <td></td>
-    <td>Bestätigen</td>
+    <td></td>
     <td>
     <input type="submit" value="Submit">
     </td>
