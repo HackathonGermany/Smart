@@ -87,7 +87,7 @@ foreach ($result as $row) {
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Daten</h1>
         <div class="lead">
-<table class="table table-hover table-responsive">
+          <table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -267,7 +267,7 @@ foreach ($result as $row) {
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Status - Graph</h4>
+        <h4 class="modal-title" style="color: black;">Status - Graph</h4>
       </div>
       <div class="modal-body">
         <iframe style="float:middle;" width="100%" frameborder=0 height="300px" src="chart.php?plot=status"></iframe> 
