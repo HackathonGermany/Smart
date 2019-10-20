@@ -159,13 +159,13 @@ foreach ($result as $row) {
      <tr>
     <td>LED-Band</td>
     <td>
-      <input type="radio" name="relais1" value="455"> Red<br>
-      <input type="radio" name="relais1" value="445"> Green<br>
-      <input type="radio" name="relais1" value="446"> Blue<br>
-      <input type="radio" name="relais1" value="448"> Yellow<br>
-      <input type="radio" name="relais1" value="452"> Purple<br>
-      <input type="radio" name="relais1" value="453"> Cyan<br>
-      <input type="radio" name="relais1" value="454"> White<br>
+      <input type="radio" name="relais1" value="100"> Red<br>
+      <input type="radio" name="relais1" value="404"> Green<br>
+      <input type="radio" name="relais1" value="101"> Blue<br>
+      <input type="radio" name="relais1" value="102"> Yellow<br>
+      <input type="radio" name="relais1" value="200"> Purple<br>
+      <input type="radio" name="relais1" value="203"> Cyan<br>
+      <input type="radio" name="relais1" value="206"> White<br>
     </td>
     </tr>
     <!--<tr>
