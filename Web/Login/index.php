@@ -158,11 +158,11 @@ foreach ($result as $row) {
     <td>
       <input type="radio" name="relais1" value="100"> Red<br>
       <input type="radio" name="relais1" value="010"> Green<br>
-      <input type="radio" name="relais1" value="001"> Aus<br>
-      <input type="radio" name="relais1" value="110"> Aus<br>
-      <input type="radio" name="relais1" value="101"> Aus<br>
-      <input type="radio" name="relais1" value="011"> Aus<br>
-      <input type="radio" name="relais1" value="111"> Aus<br>
+      <input type="radio" name="relais1" value="001"> Blue<br>
+      <input type="radio" name="relais1" value="110"> Yellow<br>
+      <input type="radio" name="relais1" value="101"> Purple<br>
+      <input type="radio" name="relais1" value="011"> Cyan<br>
+      <input type="radio" name="relais1" value="111"> White<br>
     </td>
     </tr>
     <!--<tr>
@@ -199,9 +199,9 @@ foreach ($result as $row) {
 
     <?php
     $relais1 = $_GET["relais1"];
-    $relais2 = $_GET["relais2"];
-    $relais3 = $_GET["relais3"];
-    $relais4 = $_GET["relais4"];
+    //$relais2 = $_GET["relais2"];
+    //$relais3 = $_GET["relais3"];
+    //$relais4 = $_GET["relais4"];
 
     $query = sprintf('UPDATE ralays SET relays1="'.$relais1.'" WHERE id=1;');
     $result = $mysqli->query($query);
@@ -210,7 +210,7 @@ foreach ($result as $row) {
       $data[] = $row;
     }
 
-    $query = sprintf('UPDATE ralays SET relays2="'.$relais2.'" WHERE id=1;');
+    /*$query = sprintf('UPDATE ralays SET relays2="'.$relais2.'" WHERE id=1;');
     $result = $mysqli->query($query);
     $data = array();
     foreach ($result as $row) {
