@@ -17,7 +17,7 @@ if(isset($_GET['login'])) {
         //header("Location: index.php");
         $succmsg = 'Login successful. Continuine with <a href="index.php">internal area</a>.';
     } else {
-        $errorMessage = "E-Mail oder Passwort war ungültig";
+        $errorMessage = "E-Mail or password is incorrect";
     }
     
 }
