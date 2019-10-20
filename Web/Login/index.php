@@ -92,36 +92,46 @@ foreach ($result as $row) {
     <tr>
       <th scope="col" class="col-sm-3">Name</th>
       <th scope="col" class="col-sm-3">Wert</th>
+      <th scope="col" class="col-sm-3">#</th>
+      <th scope="col" class="col-sm-3">Name</th>
+      <th scope="col" class="col-sm-3">Farbe</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Strom</td>
       <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td>//</td>
     </tr>
     <tr>
       <td>Spannung</td>
       <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
+      <td>//</td>
     </tr>
     <tr>
       <td>Watt</td>
       <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
+      <td>//</td>
     </tr>
     <tr>
       <td>Lichtstärke</td>
       <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
+      <td>//</td>
      </tr>
      <tr>
       <td>Temperatur</td>
       <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
+      <td>//</td>
      </tr>
      <tr>
       <td>Luftfeuchtigkeit</td>
       <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
+      <td>//</td>
      </tr>
      <tr>
       <td>Status</td>
       <td><a data-target="#statusModal" data-toggle="modal" href="#statusodal"><?php print_r($data["0"]["status"]); ?></a></td>
+      <td>//</td>
      </tr>
     </tr>
   </tbody> 
