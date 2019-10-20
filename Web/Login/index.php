@@ -77,9 +77,9 @@ foreach ($result as $row) {
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <img src="../assets/media/logo.svg" alt="" width="75" height="75">
+          <h3 class="masthead-brand">Dyingearth</h3>
           <nav class="nav nav-masthead justify-content-center">
-             <a class="masthead-brand">Dyingearth</a>
+             <img src="../assets/media/logo.svg" alt="" width="75" height="75">
           </nav>
         </div>
       </header>
