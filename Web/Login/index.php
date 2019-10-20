@@ -268,9 +268,9 @@ foreach ($result as $row) {
     }
     ?>
 
-    <p style="align: 'center';">
+    <!-- <p style="align: 'center';">
     <iframe style="float:middle;" width="600" height="300" frameborder=0 src="<?php echo $test54321 ?>"></iframe> 
-    </p>
+    </p> -->
 
     <form formmethod="get" action="index.php">
     <table>
