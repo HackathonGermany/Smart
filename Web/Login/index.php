@@ -94,7 +94,7 @@ foreach ($result as $row) {
       <th scope="col" class="col-sm-3">Wert</th>
       <th scope="col" class="col-sm-3">//</th>
       <th scope="col" class="col-sm-3">Name</th>
-      <th scope="col" class="col-sm-3">Farbe</th>
+      <th scope="col" class="col-lg-3">Farbe</th>
     </tr>
   </thead>
   <tbody>
