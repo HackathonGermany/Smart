@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   sodipodi:docname="drawing.svg">
+   sodipodi:docname="drawing.svg"
+   inkscape:export-filename="/home/jakob/Documents/hackathon/Smart/CONCEPT.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <marker
@@ -145,9 +148,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="5.864674"
-     inkscape:cy="446.11301"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="381.76936"
+     inkscape:cy="638.07624"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -229,7 +232,7 @@
        inkscape:export-ydpi="96" />
     <g
        id="g1009"
-       transform="translate(1.8708867,3.2072343)"
+       transform="translate(1.6036172,1.0690781)"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
@@ -267,7 +270,7 @@
     </g>
     <g
        id="g1001"
-       transform="matrix(1.0345241,0,0,1.0345241,-5.3062405,-6.6475335)"
+       transform="matrix(1.0345241,0,0,1.0345241,-2.9008147,-2.9057601)"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
@@ -305,30 +308,30 @@
        inkscape:export-ydpi="96" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.04964685px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17624116"
-       x="4.3178658"
-       y="136.3372"
+       style="font-style:normal;font-weight:normal;font-size:3.92522955px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09813073"
+       x="11.038979"
+       y="136.15645"
        id="text887"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan885"
-         x="4.3178658"
-         y="136.3372"
-         style="stroke-width:0.17624116">ESP 8266</tspan></text>
+         x="11.038979"
+         y="136.15645"
+         style="stroke-width:0.09813073">ESP 8266</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.04964685px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17624116"
-       x="74.200409"
-       y="93.90229"
+       style="font-style:normal;font-weight:normal;font-size:4.28795147px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10719878"
+       x="73.068222"
+       y="139.37802"
        id="text887-3"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan885-6"
-         x="74.200409"
-         y="93.90229"
-         style="stroke-width:0.17624116">Raspberry Pi 3</tspan></text>
+         x="73.068222"
+         y="139.37802"
+         style="stroke-width:0.10719878">Raspberry Pi 3</tspan></text>
     <path
        style="fill:none;stroke:#ff4201;stroke-width:1.47632039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-7)"
        d="M 85.224783,122.49579 C 97.463611,99.058867 116.01415,88.135586 148.70347,105.24395"
@@ -339,7 +342,7 @@
        inkscape:export-ydpi="96" />
     <path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#6d42fc;stroke-width:1.20178592;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker995)"
-       d="m 150.18476,112.10612 c -12.23883,23.43692 -30.78937,34.36021 -63.478689,17.25184"
+       d="m 150.46296,108.75255 c -12.23883,23.43692 -30.78937,34.36021 -63.478689,17.25184"
        id="path1217-3-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
