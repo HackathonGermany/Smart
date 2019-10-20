@@ -71,7 +71,7 @@ foreach ($result as $row) {
 <?php
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
-<table class="table table-hover">
+<table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th scope="col">Name</th>
