@@ -230,7 +230,7 @@ foreach ($result as $row) {
     </tr>
     <tr>
       <td>Spannung</td>
-      <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
+      <td><a href="#"><div data-toggle="modal" data-target="#stromModal"><?php print_r($data["0"]["Spannung"]); ?></div></a></td>
     </tr>
     <tr>
       <td>Watt</td>
