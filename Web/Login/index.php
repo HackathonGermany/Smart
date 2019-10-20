@@ -73,6 +73,8 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
+<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
+
 <div>
 <!-- Modal for Strom-->
 <div id="stromModal" class="modal fade" role="dialog">
@@ -213,6 +215,8 @@ foreach ($result as $row) {
 
   </div>
 </div>
+
+
 </div>
 
 <div>
@@ -226,11 +230,11 @@ foreach ($result as $row) {
   <tbody>
     <tr>
       <td>Strom</td>
-      <td><div data-toggle="modal" data-target="#stromModal">0.00</div></td>
+      <td><a data-target="#stromModal" data-toggle="modal" href="#myModal">HELP</a></td>
     </tr>
     <tr>
       <td>Spannung</td>
-      <td><a href="#"><div data-toggle="modal" data-target="#stromModal"><?php print_r($data["0"]["Spannung"]); ?></div></a></td>
+      <td><a href="?plot=Spannung"><?php print_r($data["0"]["Spannung"]); ?></a></td>
     </tr>
     <tr>
       <td>Watt</td>
@@ -285,11 +289,31 @@ foreach ($result as $row) {
       <input type="radio" name="relais1" value="200"> Purple<br>
       <input type="radio" name="relais1" value="203"> Cyan<br>
       <input type="radio" name="relais1" value="206"> White<br>
-      <input type="radio" name="relais1" value="501"> Fan on<br>
-      <input type="radio" name="relais1" value="502"> Fan off<br>
-      <input type="radio" name="relais1" value="403"> All off<br>
     </td>
     </tr>
+    <!--<tr>
+    <td>Relais 2</td>
+    <td>
+      <input type="radio" name="relais2" value="0"> Aus<br>
+      <input type="radio" name="relais2" value="1"> An<br>
+      </td>
+    </tr>
+    <tr>
+    <td>Relais 3</td>
+    <td>
+      <input type="radio" name="relais3" value="0"> Aus<br>
+      <input type="radio" name="relais3" value="1"> An<br>
+      </td>
+    </tr> -->
+    <!--
+    <tr>
+    <td>Relais 4</td>
+    <td>
+      <input type="radio" name="relais4" value="0"> Aus<br>
+      <input type="radio" name="relais4" value="1"> An<br>
+      </td>
+    </tr> 
+    -->
     <tr>
     <td>Best&auml;tigung</td>
     <td>
