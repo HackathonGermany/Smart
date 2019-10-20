@@ -216,7 +216,7 @@ foreach ($result as $row) {
 
 
 </div>
-
+<div data-toggle="modal" data-target="#stromModal"><?php print_r($data["0"]["Spannung"]); ?></div>
 <div>
 <table class="table table-hover table-responsive">
   <thead>
