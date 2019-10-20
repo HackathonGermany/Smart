@@ -73,18 +73,17 @@ foreach ($result as $row) {
 //echo "Hallo Benutzer mit der ID: ".$userid;
 ?>
 
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div data-toggle="modal" data-target="#stromModal">Clickable content, graphics, whatever</div>
 
+<!-- Trigger the modal with a button -->
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="stromModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Strom - Graph</h4>
       </div>
       <div class="modal-body">
         <p>Some text in the modal.</p>
@@ -108,7 +107,7 @@ foreach ($result as $row) {
   <tbody>
     <tr>
       <td>Strom</td>
-      <td><a href="?plot=Strom"><?php print_r($data["0"]["Strom"]); ?></a></td>
+      <td><a ><?php print_r($data["0"]["Strom"]); ?></a></td>
     </tr>
     <tr>
       <td>Spannung</td>
