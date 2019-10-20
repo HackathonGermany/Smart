@@ -285,7 +285,7 @@ foreach ($result as $row) {
     <form formmethod="get" action="index.php">
     <table>
     <tr>
-      <th>Name1</th>
+      <th>Name</th>
       <th>Farbe</th>
      </tr>
      <tr>
