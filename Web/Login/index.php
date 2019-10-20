@@ -345,7 +345,7 @@ foreach ($result as $row) {
     foreach ($result as $row) {
       $data[] = $row;
     }*/
-    ?>
+    ?> 
 
 </body>
 </html>
