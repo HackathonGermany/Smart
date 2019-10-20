@@ -77,8 +77,8 @@ foreach ($result as $row) {
 
 <!-- Trigger the modal with a button -->
 <!-- Modal -->
-<div id="stromModal" class="modal-lg fade" role="dialog">
-  <div class="modal-dialog">
+<div id="stromModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
     <div class="modal-content">
