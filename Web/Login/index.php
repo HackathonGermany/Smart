@@ -103,14 +103,14 @@ foreach ($result as $row) {
       <td><a data-target="#stromModal" data-toggle="modal" href="#stromModal"><?php print_r($data["0"]["Strom"]); ?></a></td>
       <td>//</td>
       <td></td>
-      <td><input type="radio" name="relais1" value="100">Red</td>
+      <td><input type="radio" name="relais1" value="100"> Red</td>
     </tr>
     <tr>
       <td>Spannung</td>
       <td><a data-target="#spannungModal" data-toggle="modal" href="#spannungModal"><?php print_r($data["0"]["Spannung"]); ?></a></td>
       <td>//</td>
       <td></td>
-      <td><input type="radio" name="relais1" value="404">Green</td>
+      <td><input type="radio" name="relais1" value="404"> Green</td>
     </tr>
     <tr>
       <td>Watt</td>
