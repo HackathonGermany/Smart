@@ -170,7 +170,8 @@ foreach ($result as $row) {
       <td><input type="radio" name="relais1" value="403">All off</td>
      </tr>
      <tr>
-       <td></td>
+     <td></td>
+     <td></td>
     <td>Bestätigen</td>
     <td>
     <input type="submit" value="Submit">
@@ -181,9 +182,6 @@ foreach ($result as $row) {
   </tbody> 
 </table>
 </div>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-        </p>
       </main>
 
       <footer class="mastfoot mt-auto">
