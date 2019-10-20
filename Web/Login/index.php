@@ -117,28 +117,28 @@ foreach ($result as $row) {
       <td><a data-target="#wattModal" data-toggle="modal" href="#wattModal"><?php print_r($data["0"]["Watt"]); ?></a></td>
       <td>//</td>
       <td></td>
-      <td><input type="radio" name="relais1" value="101">Blue</td>
+      <td><input type="radio" name="relais1" value="101"> Blue</td>
     </tr>
     <tr>
       <td>Lichtstärke</td>
       <td><a data-target="#lichtstaerkeModal" data-toggle="modal" href="#lichtstaerkeModal"><?php print_r($data["0"]["lichtstaerke"]); ?></a></td>
       <td>//</td>
       <td class="col-sm-3">LED-Band</td>
-      <td><input type="radio" name="relais1" value="102">Yellow</td>
+      <td><input type="radio" name="relais1" value="102"> Yellow</td>
      </tr>
      <tr>
       <td>Temperatur</td>
       <td><a data-target="#temperatureModal" data-toggle="modal" href="#temperatureModal"><?php print_r($data["0"]["temperatur"]); ?></a></td>
       <td>//</td>
       <td></td>
-      <td><input type="radio" name="relais1" value="200">Purple</td>
+      <td><input type="radio" name="relais1" value="200"> Purple</td>
      </tr>
      <tr>
       <td>Luftfeuchtigkeit</td>
       <td><a data-target="#luftfeuchtigkeitModal" data-toggle="modal" href="#luftfeuchtigkeitModal"><?php print_r($data["0"]["luftfeuchtigkeit"]); ?></a></td>
       <td>//</td>
       <td></td>
-      <td><input type="radio" name="relais1" value="203">Cyan</td>
+      <td><input type="radio" name="relais1" value="203"> Cyan</td>
      </tr>
      <tr>
       <td>Status</td>
@@ -146,28 +146,28 @@ foreach ($result as $row) {
       <td>//</td>
       <td></td>
       <form formmethod="get" action="index.php">
-      <td><input type="radio" name="relais1" value="206">White</td>
+      <td><input type="radio" name="relais1" value="206"> White</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><input type="radio" name="relais1" value="501">Fan on</td>
+      <td><input type="radio" name="relais1" value="501"> Fan on</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><input type="radio" name="relais1" value="502">Fan off</td>
+      <td><input type="radio" name="relais1" value="502"> Fan off</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><input type="radio" name="relais1" value="403">All off</td>
+      <td><input type="radio" name="relais1" value="403"> All off</td>
      </tr>
      <tr>
      <td></td>
