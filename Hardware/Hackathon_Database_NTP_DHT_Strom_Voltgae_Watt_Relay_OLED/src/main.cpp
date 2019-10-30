@@ -315,16 +315,10 @@ void loop() {
   COLORS_R();
   OLED();
   h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
   t = dht.readTemperature();
-  //Check WiFi connection status
   if(WiFi.status()== WL_CONNECTED){
     HTTPClient http;
-    
-    // Your Domain name with URL path or IP address with path
     http.begin(serverName);
-    
-    // Specify content-type header
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     
     String httpRequestData = "api_key=" + apiKeyValue + "&strom=" + String(CURRENT)
@@ -333,13 +327,7 @@ void loop() {
                            + "&status=" + String(StateArray) + "&time=" + String(UNIX) + "&datum=" + String(datum) +"";           
     Serial.print("httpRequestData: ");
     Serial.println(httpRequestData);
-    
-
-    // Send HTTP POST request
      httpResponseCode = http.POST(httpRequestData);
-     
-
-        
     if (httpResponseCode>0) {
       Serial.print("HTTP Response code: ");
       Serial.println(httpResponseCode);
@@ -348,12 +336,10 @@ void loop() {
       Serial.print("Error code: ");
       Serial.println(httpResponseCode);
     }
-    // Free resources
     http.end();
   }
   else {
     Serial.println("WiFi Disconnected");
   }
-  //Send an HTTP POST request every 30 seconds
-  delay(5000);  
+  delay(3000);  
 }

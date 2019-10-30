@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-int Value;
+float Value;
 void setup() {
   // put your setup code here, to run once:
 analogReadResolution(12);
@@ -10,9 +10,9 @@ Serial.begin(9600);
 
 void loop() {
   // put your main code here, to run repeatedly:
-Value = analogRead(35);
-Value = constrain(Value,0,2900);
-Value = map(Value,0,2900,0,1000);
+Value = analogRead(34);
+Value = constrain(Value,0.0,3550.0);
+Value = map(Value,0.0,3550.0,0.0,12.0);
 Serial.println(Value);
 delay(150);
 }
